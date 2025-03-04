@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    text-align: center;
+}
+
+#clickText {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+#message {
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.highlight_male {
+    color: rgb(46, 123, 196);
+}
+
+.highlight_female {
+    color: pink;
+}
+
+.highlight_m {
+    animation: rainbow 3s infinite linear;
+}
+
+@keyframes rainbow {
+    0% { color: #fff; text-shadow: 0 0 5px red; }
+    14% { color: #fff; text-shadow: 0 0 5px orange; }
+    28% { color: #fff; text-shadow: 0 0 5px yellow; }
+    42% { color: #fff; text-shadow: 0 0 5px green; }
+    57% { color: #fff; text-shadow: 0 0 5px blue; }
+    71% { color: #fff; text-shadow: 0 0 5px indigo; }
+    85% { color: #fff; text-shadow: 0 0 5px violet; }
+    100% { color: #fff; text-shadow: 0 0 5px red; }
+}
