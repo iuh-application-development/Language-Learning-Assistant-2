@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model, authenticate
+from django.contrib.auth.forms import UserCreationForm
 
 User = get_user_model()
 
@@ -10,15 +11,13 @@ class UserLoginForm(forms.Form):
         'id': 'email',
         'type': 'email',
         'placeholder': 'Email Address'
-        })
-    )
+    }))
     password = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control',
         'id': 'password',
         'type': 'password',
         'placeholder': 'Password'
-        })
-    )
+    }))
     
     def clean(self):
         email = self.cleaned_data.get('email')
@@ -37,3 +36,28 @@ class UserLoginForm(forms.Form):
     
     def get_user(self):
         return getattr(self, 'user', None)
+    
+    
+
+class UserRegisterForm(UserCreationForm):
+    email = forms.EmailField(widget=forms.EmailInput(attrs={
+        'class': 'form-control',
+        'id': 'email',
+        'type': 'email',
+        'placeholder': 'Email Address'
+    }))
+    password1 = forms.CharField(widget=forms.PasswordInput(attrs={
+        'class': 'form-control',
+        'type': 'password',
+        'id': 'password',
+        'placeholder': 'Password'
+    }))
+    password2 = forms.CharField(widget=forms.PasswordInput(attrs={
+        'class': 'form-control',
+        'type': 'password',
+        'id': 'password',
+        'placeholder': 'Confirm Password'
+    }))
+    class Meta:
+        model = User
+        fields = ['email', 'password1', 'password2']
