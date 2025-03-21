@@ -9,7 +9,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('home')
+            return redirect('dashboard:home')
     else:
         form = UserLoginForm()
     return render(request, 'users/login.html', {'form': form})
@@ -18,15 +18,16 @@ def login_view(request):
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
+        # print(form.errors)
         if form.is_valid():
             form.save()
-            return redirect('login')
+            return redirect('users:login')
     else:
         form = UserRegisterForm()
     return render(request, 'users/signup.html', {'form': form})
 
 def logout_view(request):
     logout(request)
-    return redirect('login')
+    return redirect('users:login')
 
 
