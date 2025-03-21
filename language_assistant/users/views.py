@@ -24,3 +24,9 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'users/signup.html', {'form': form})
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
+
