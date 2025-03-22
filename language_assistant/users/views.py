@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import UserLoginForm, UserRegisterForm
 from django.contrib.auth import login, logout
+from django.contrib import messages
 
 # Create your views here.
 def login_view(request):
@@ -27,7 +28,15 @@ def register(request):
     return render(request, 'users/signup.html', {'form': form})
 
 def logout_view(request):
-    logout(request)
-    return redirect('users:login')
+    if request.method == 'POST':
+        confirm = request.POST.get('confirm')
+        if confirm == 'yes':
+            logout(request)
+            messages.success(request, 'Bạn đã đăng xuất thành công!')
+            return redirect('users:login')
+        elif confirm == 'no':
+            return redirect('dashboard:home')  # Hoặc trang chính mà bạn muốn chuyển đến
+    return render(request, 'users/logout.html')
+
 
 

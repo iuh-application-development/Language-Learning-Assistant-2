@@ -111,11 +111,28 @@
                     <div class="dropdown-menu fade-down m-0">
                         <a href="{% url 'dashboard:team' %}" class="dropdown-item">Our Team</a>
                         <a href="{% url 'dashboard:testimonial' %}" class="dropdown-item">Testimonial</a>
-
                     </div>
                 </div>
+
                 <a href="{% url 'dashboard:contact' %}" class="nav-item nav-link">Contact</a>
-                <a href="{% url 'users:login' %}" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                {% if user.is_authenticated %}
+                <div class="nav-item dropdown">
+                    <a href="{% url 'users:login' %}" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="" class="dropdown-item">Profile</a>
+                        <a href="{% url 'users:logout' %}" class="dropdown-item">Logout</a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="nav-item dropdown">
+                    <a href="{% url 'users:login' %}" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="{% url 'users:login' %}" class="dropdown-item">Login</a>
+                        <a href="{% url 'users:register' %}" class="dropdown-item">Sign Up</a>
+                    </div>
+                </div>
+                    
+                {% endif %}
                 <a href="#" class="nav-item nav-link">
 
                 <div id="google_translate_element">
@@ -136,8 +153,8 @@
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Quick Link</h4>
-                    <p><a class="text-light" href="about.html">About Us</a></p>
-                    <p><a class="text-light" href="contact.html">Contact Us</a></p>
+                    <p><a class="text-light" href="{% url 'dashboard:about' %}">About Us</a></p>
+                    <p><a class="text-light" href="{% url 'dashboard:contact' %}">Contact Us</a></p>
                     <p><a class="text-light" href="">Privacy Policy</a></p>
                     <p><a class="text-light" href="">Terms & Condition</a></p>
                     <p><a class="text-light" href="">FAQs & Help</a></p>
@@ -174,7 +191,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="index.html">Secret Coder</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="{% url 'dashboard:home' %}">Secret Coder</a>, All Right Reserved.
 
                     </div>
                 </div>
