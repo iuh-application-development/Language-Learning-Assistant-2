@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'dashboard.apps.DashboardConfig',
     'thanks.apps.ThanksConfig',
     'users.apps.UsersConfig',
+    'flashcard.apps.FlashcardConfig',
 ]
 
 MIDDLEWARE = [

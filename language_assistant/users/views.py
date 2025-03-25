@@ -19,7 +19,7 @@ def login_view(request):
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
-        # print(form.errors)
+        print(form.errors)
         if form.is_valid():
             form.save()
             return redirect('users:login')

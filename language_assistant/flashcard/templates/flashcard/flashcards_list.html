@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Flashcards</h1>
+<a class="btn btn-primary mb-3" href="{% url 'flashcard:flashcard_new' %}">Add New Flashcard</a>
+<a class="btn btn-primary mb-3" href="{% url 'flashcard:category_new' %}">Add New Category</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for flashcard in flashcards %}
+        <tr>
+            <td>{{ flashcard.question }}</td>
+            <td>{{ flashcard.category.name }}</td>
+            <td>
+                <a class="btn btn-info btn-sm" href="{% url 'flashcard:flashcard_detail' flashcard.pk %}">View</a>
+                <a class="btn btn-warning btn-sm" href="{% url 'flashcard:flashcard_edit' flashcard.pk %}">Edit</a>
+                <form method="post" action="{% url 'flashcard:flashcard_delete' flashcard.pk %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
