@@ -16,6 +16,24 @@ class Flashcard(models.Model):
     answer = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     user = models.ForeignKey(MyUser, on_delete=models.CASCADE, related_name='flashcards', null=True, blank=True)
+
+    '''
+    created_at và updated_at khi lần đầu khởi tạo cần làm theo các bước sau:
+    1. tạo biến như sau:
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(default=timezone.now)
+
+    2. sau đó chạy lệnh:
+    python manage.py makemigrations
+    python manage.py migrate
+
+    3. Sau đó chỉnh sửa lại tham số:
+   created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    ** Lưu ý không cần làm lại bước 2 sau khi làm xong bước 3
+    '''
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

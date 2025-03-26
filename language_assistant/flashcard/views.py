@@ -104,3 +104,15 @@ def category_new(request):
     else:
         form = CategoryForm()
     return render(request, 'flashcard/category_form.html', {'form': form})
+
+@login_required
+def category_delete(request, pk):
+    category = get_object_or_404(Category, pk=pk, user=request.user)
+    if request.method == 'POST':
+        # Xóa tất cả flashcards thuộc category này
+        category.flashcard_set.all().delete()
+        # Xóa category
+        category.delete()
+        messages.success(request, 'Category đã được xóa thành công!')
+        return redirect('flashcard:flashcard_list')
+    return render(request, 'flashcard/category_confirm_delete.html', {'category': category})
