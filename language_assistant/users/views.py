@@ -19,10 +19,14 @@ def login_view(request):
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
-        print(form.errors)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Đăng ký tài khoản thành công! Vui lòng đăng nhập.')
             return redirect('users:login')
+        else:
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, error)
     else:
         form = UserRegisterForm()
     return render(request, 'users/signup.html', {'form': form})
