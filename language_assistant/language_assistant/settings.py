@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'thanks.apps.ThanksConfig',
     'users.apps.UsersConfig',
     'flashcard.apps.FlashcardConfig',
+    'dictionary.apps.DictionaryConfig',
 ]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

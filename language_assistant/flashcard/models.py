@@ -1,5 +1,6 @@
 from django.db import models
 from users.models import MyUser
+from django.utils import timezone
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -24,18 +25,18 @@ class Flashcard(models.Model):
     updated_at = models.DateTimeField(default=timezone.now)
 
     2. sau đó chạy lệnh:
-    python manage.py makemigrations
-    python manage.py migrate
+    py manage.py makemigrations
+    py manage.py migrate
 
     3. Sau đó chỉnh sửa lại tham số:
-   created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     ** Lưu ý không cần làm lại bước 2 sau khi làm xong bước 3
     '''
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.question
