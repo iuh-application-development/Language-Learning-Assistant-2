@@ -35,8 +35,8 @@ class Flashcard(models.Model):
     ** Lưu ý không cần làm lại bước 2 sau khi làm xong bước 3
     '''
 
-    created_at = models.DateTimeField(default=timezone.now)
-    updated_at = models.DateTimeField(default=timezone.now)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.question
