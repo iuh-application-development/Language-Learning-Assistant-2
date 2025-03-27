@@ -1,0 +1,121 @@
+{% extends "dashboard/base.html" %} {% load static %} {% block title %}
+<title>{{ title }} - Language Learning Assistant</title>
+{% endblock %} {% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h1 class="display-3 text-white animated slideInDown">{{ title }}</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="{% url 'dashboard:home' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white" href="{% url 'flashcard:flashcard_list' %}"
+                >Flashcards</a
+              >
+            </li>
+            <li class="breadcrumb-item text-white active" aria-current="page">
+              {{ title }}
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Flashcard Form Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    {% if messages %}
+    <div class="row mb-4">
+      <div class="col-12">
+        {% for message in messages %}
+        <div
+          class="alert alert-{{ message.tags }} alert-dismissible fade show"
+          role="alert"
+        >
+          {{ message }}
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-8">
+        <div class="card wow fadeInUp" data-wow-delay="0.1s">
+          <div class="card-body">
+            <form method="post" class="p-4">
+              {% csrf_token %}
+              <div class="mb-4">
+                <label for="{{ form.question.id_for_label }}" class="form-label"
+                  >Câu hỏi:</label
+                >
+                {{ form.question }} {% if form.question.errors %}
+                <div class="invalid-feedback d-block">
+                  {{ form.question.errors }}
+                </div>
+                {% endif %}
+              </div>
+              <div class="mb-4">
+                <label for="{{ form.answer.id_for_label }}" class="form-label"
+                  >Đáp án:</label
+                >
+                {{ form.answer }} {% if form.answer.errors %}
+                <div class="invalid-feedback d-block">
+                  {{ form.answer.errors }}
+                </div>
+                {% endif %}
+              </div>
+              <div class="mb-4">
+                <label for="{{ form.category.id_for_label }}" class="form-label"
+                  >Category:</label
+                >
+                {{ form.category }} {% if form.category.errors %}
+                <div class="invalid-feedback d-block">
+                  {{ form.category.errors }}
+                </div>
+                {% endif %}
+              </div>
+              <div class="d-flex justify-content-between">
+                <a
+                  href="{% url 'flashcard:flashcard_list' %}"
+                  class="btn btn-secondary"
+                  >Hủy</a
+                >
+                <button type="submit" class="btn btn-primary">Lưu</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Flashcard Form End -->
+{% endblock %} {% block extra_css %}
+<style>
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+  }
+  textarea.form-control {
+    min-height: 100px;
+  }
+  select.form-control {
+    appearance: auto;
+  }
+</style>
+{% endblock %}

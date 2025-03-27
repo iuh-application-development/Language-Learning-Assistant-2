@@ -24,5 +24,6 @@ urlpatterns = [
     path('', include('dashboard.urls')),
     path('', include('thanks.urls')),
     path('', include('users.urls')),
+    path('', include('flashcard.urls')),
     path('', include('dictionary.urls')),
 ]

@@ -11,20 +11,36 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
             return redirect('dashboard:home')
+        else:
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, error)
     else:
         form = UserLoginForm()
+        # Xóa tất cả thông báo cũ khi load trang đăng nhập
+        storage = messages.get_messages(request)
+        storage.used = True
     return render(request, 'users/login.html', {'form': form})
 
 
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
-        # print(form.errors)
         if form.is_valid():
             form.save()
-            return redirect('users:login')
+            # Thay vì redirect với message, ta sẽ render trang signup với message thành công
+            messages.success(request, 'Đăng ký tài khoản thành công! Vui lòng đăng nhập.')
+            # Render lại trang signup với form mới và message thành công
+            return render(request, 'users/signup.html', {'form': UserRegisterForm()})
+        else:
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, error)
     else:
         form = UserRegisterForm()
+        # Xóa tất cả thông báo cũ khi load trang đăng ký
+        storage = messages.get_messages(request)
+        storage.used = True
     return render(request, 'users/signup.html', {'form': form})
 
 def logout_view(request):

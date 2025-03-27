@@ -1,0 +1,77 @@
+{% extends "dashboard/base.html" %} {% load static %} {% block title %}
+<title>{{ flashcard.question }} - Language Learning Assistant</title>
+{% endblock %} {% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h1 class="display-3 text-white animated slideInDown">
+          Chi tiết Flashcard
+        </h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="{% url 'dashboard:home' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white" href="{% url 'flashcard:flashcard_list' %}"
+                >Flashcards</a
+              >
+            </li>
+            <li class="breadcrumb-item text-white active" aria-current="page">
+              Chi tiết
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Flashcard Detail Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-8">
+        <div class="card wow fadeInUp" data-wow-delay="0.1s">
+          <div class="card-body">
+            <h3 class="card-title mb-4">{{ flashcard.question }}</h3>
+            <div class="mb-4">
+              <h5>Đáp án:</h5>
+              <p class="card-text">{{ flashcard.answer }}</p>
+            </div>
+            <div class="mb-4">
+              <h5>Thông tin thêm:</h5>
+              <p><strong>Category:</strong> {{ flashcard.category.name }}</p>
+              <p><strong>Ngày tạo:</strong> {{ flashcard.created_at|date:"d/m/Y H:i" }}</p>
+              <p><strong>Cập nhật lần cuối:</strong> {{ flashcard.updated_at|date:"d/m/Y H:i" }}</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <a
+                href="{% url 'flashcard:flashcard_list' %}"
+                class="btn btn-secondary"
+                >Quay lại</a
+              >
+              <div>
+                <a
+                  href="{% url 'flashcard:flashcard_edit' pk=flashcard.pk %}"
+                  class="btn btn-warning me-2"
+                  >Sửa</a
+                >
+                <a
+                  href="{% url 'flashcard:flashcard_delete' pk=flashcard.pk %}"
+                  class="btn btn-danger"
+                  >Xóa</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Flashcard Detail End -->
+{% endblock %}

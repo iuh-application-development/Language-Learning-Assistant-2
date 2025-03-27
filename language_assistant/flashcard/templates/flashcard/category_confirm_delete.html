@@ -1,0 +1,61 @@
+{% extends "dashboard/base.html" %} {% block title %}
+<title>Xóa Category - Language Learning Assistant</title>
+{% endblock %} {% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h1 class="display-3 text-white animated slideInDown">Xóa Category</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="{% url 'dashboard:home' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white" href="{% url 'flashcard:flashcard_list' %}"
+                >Flashcards</a
+              >
+            </li>
+            <li class="breadcrumb-item text-white active" aria-current="page">
+              Xóa Category
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Delete Confirmation Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="alert alert-warning" role="alert">
+          <h4 class="alert-heading mb-3">Xác nhận xóa category!</h4>
+          <p>Bạn có chắc chắn muốn xóa category "{{ category.name }}"?</p>
+          <hr />
+          <p class="mb-0">
+            Lưu ý: Tất cả các flashcard thuộc category này cũng sẽ bị xóa.
+          </p>
+        </div>
+
+        <form method="post" class="mt-4">
+          {% csrf_token %}
+          <div class="d-flex justify-content-center">
+            <a
+              href="{% url 'flashcard:flashcard_list' %}"
+              class="btn btn-secondary me-2"
+              >Hủy</a
+            >
+            <button type="submit" class="btn btn-danger">Xác nhận xóa</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Delete Confirmation End -->
+{% endblock %}

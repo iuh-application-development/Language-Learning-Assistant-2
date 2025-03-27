@@ -1,0 +1,63 @@
+{% extends "dashboard/base.html" %} {% load static %} {% block title %}
+<title>Xóa Flashcard - Language Learning Assistant</title>
+{% endblock %} {% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <h1 class="display-3 text-white animated slideInDown">Xóa Flashcard</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="{% url 'dashboard:home' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white" href="{% url 'flashcard:flashcard_list' %}"
+                >Flashcards</a
+              >
+            </li>
+            <li class="breadcrumb-item text-white active" aria-current="page">
+              Xóa
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Delete Confirmation Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-8">
+        <div class="card wow fadeInUp" data-wow-delay="0.1s">
+          <div class="card-body text-center p-5">
+            <h4 class="mb-4">Bạn có chắc chắn muốn xóa flashcard này?</h4>
+            <p class="mb-4">
+              <strong>Câu hỏi:</strong> {{ flashcard.question }}
+            </p>
+            <p class="mb-4">
+              <strong>Category:</strong> {{ flashcard.category.name }}
+            </p>
+            <form method="post">
+              {% csrf_token %}
+              <div class="d-flex justify-content-center">
+                <a
+                  href="{% url 'flashcard:flashcard_list' %}"
+                  class="btn btn-secondary me-2"
+                  >Hủy</a
+                >
+                <button type="submit" class="btn btn-danger">Xóa</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Delete Confirmation End -->
+{% endblock %}
