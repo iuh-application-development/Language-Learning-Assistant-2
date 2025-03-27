@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'dashboard.apps.DashboardConfig',
     'thanks.apps.ThanksConfig',
     'users.apps.UsersConfig',
+    'dictionary.apps.DictionaryConfig',
 ]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

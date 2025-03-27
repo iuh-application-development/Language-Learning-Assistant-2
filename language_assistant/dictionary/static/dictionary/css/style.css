@@ -1,0 +1,28 @@
+
+.result {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.word-details {
+    margin-bottom: 20px;
+}
+
+.word-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sound-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.word-meaning, .word-example {
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 3px solid #007bff;
+}
