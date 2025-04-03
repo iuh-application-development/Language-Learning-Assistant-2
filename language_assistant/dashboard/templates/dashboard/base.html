@@ -103,8 +103,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'dictionary:dictionary' %}" class="nav-item nav-link">Dictionary</a>
                 <a href="{% url 'dashboard:home' %}" class="nav-item nav-link active">Home</a>
                 <a href="{% url 'dashboard:about' %}" class="nav-item nav-link">About</a>
+
                 <a href="{% url 'dashboard:courses' %}" class="nav-item nav-link">Courses</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>

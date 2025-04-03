@@ -1,6 +1,9 @@
-{% extends "dashboard/base.html" %} {% load static %} {% block title %}
+{% extends "dashboard/base.html" %} 
+{% load static %} 
+{% block title %}
 <title>Flashcards - Language Learning Assistant</title>
-{% endblock %} {% block content %}
+{% endblock %} 
+{% block content %}
 <!-- Header Start -->
 <div class="container-fluid bg-primary py-5 mb-5 page-header">
   <div class="container py-5">
@@ -160,8 +163,11 @@
       </script>
   </div>
 </div>
+</div>
 <!-- Flashcards List End -->
-{% endblock %} {% block extra_css %}
+{% endblock %}
+<!-- 
+  {% block extra_css %}
 <style>
   .course-item {
     border-radius: 8px;
@@ -181,4 +187,4 @@
     -webkit-box-orient: vertical;
   }
 </style>
-{% endblock %}
+{% endblock %}  -->
