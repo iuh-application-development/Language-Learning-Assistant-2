@@ -66,7 +66,3 @@ python manage.py shell
   python -m django --version
   ```
 
----
-
-## **Kết Luận**
-Trên đây là các lệnh quan trọng giúp bạn làm việc với Django. Nếu gặp lỗi, hãy kiểm tra lại môi trường hoặc liên hệ thành viên trong nhóm. 🚀
