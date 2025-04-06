@@ -26,4 +26,6 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('flashcard.urls')),
     path('', include('dictionary.urls')),
+    path('', include('podcast.urls')),
+    path('', include('quiz.urls')),
 ]
