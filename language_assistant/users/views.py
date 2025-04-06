@@ -29,9 +29,10 @@ def register(request):
         if form.is_valid():
             form.save()
             # Thay vì redirect với message, ta sẽ render trang signup với message thành công
-            messages.success(request, 'Đăng ký tài khoản thành công! Vui lòng đăng nhập.')
+            messages.success(request, 'Registration successful! You can now log in.')
             # Render lại trang signup với form mới và message thành công
-            return render(request, 'users/signup.html', {'form': UserRegisterForm()})
+            # return render(request, 'users/signup.html', {'form': UserRegisterForm()})
+            return redirect('users:login')  # Chuyển hướng đến trang đăng nhập sau khi đăng ký thành công
         else:
             for field, errors in form.errors.items():
                 for error in errors:

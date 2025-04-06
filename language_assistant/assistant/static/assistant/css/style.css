@@ -283,8 +283,8 @@ body.show-chatbot .chatbot-popup {
 }
 
 .header-info .chatbot-logo {
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   padding: 6px;
   fill: #00abb1;
   flex-shrink: 0;
@@ -341,15 +341,15 @@ body.show-chatbot .chatbot-popup {
 }
 
 .chat-body .message .bot-avatar {
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   padding: 6px;
   fill: #fff;
   flex-shrink: 0;
   margin-bottom: 2px;
   align-self: flex-end;
   border-radius: 50%;
-  background: #ffba6a;
+  background: #72dcdf;
 }
 
 .chat-body .message .message-text {
