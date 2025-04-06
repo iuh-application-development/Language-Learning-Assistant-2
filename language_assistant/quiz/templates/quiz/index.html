@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game - API Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel = "stylesheet" href = "{% static 'quiz/css/main.css' %}">
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+
+        }
+        
+        .navbar-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .navbar-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .navbar-links li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .navbar-links li a:hover {
+            color: #ffd700;
+        }
+
+        .navbar-brand a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        }
+
+        .navbar-brand a:hover {
+        color: #ffd700;
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        
+        .social-icons {
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #ffd700;
+        }
+        
+        .footer-links {
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        /* Adjust main content to accommodate navbar and footer */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="{% url 'quiz:quiz' %}">
+                <i class="fas fa-brain"></i> Quiz Master
+            </a>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="{% url 'dashboard:home' %}"><i class="fas fa-home"></i> Return LA</a></li>
+            <li><a href="#"><i class="fas fa-list"></i> Categories</a></li>
+            <li><a href="#"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="wrapper">
+            <div class="quiz-container">
+                <div class="quiz-head">
+                    <h1 class="quiz-title">Quiz Game</h1>
+                    <div class="quiz-score flex">
+                        <span id="correct-score"></span>/<span id="total-question"></span>
+                    </div>
+                </div>
+                <div class="quiz-body">
+                    <h2 class="quiz-question" id="question"><!--What is the full form of HTTP? --></h2>
+                    <ul class="quiz-options">
+                        <!-- <li>1. Hyper text transfer package</li>
+                        <li>2. Hyper text transfer protocol</li>
+                        <li>3. Hyphenation text test program</li>
+                        <li>4. None of the above</li> -->
+                    </ul>
+                    <div id="result">
+                    </div>
+                </div>
+                <div class="quiz-foot">
+                    <button type="button" id="check-answer">Check Answer</button>
+                    <button type="button" id="play-again">Play Again!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Quiz Master. All Rights Reserved.
+        </div>
+    </footer>
+    
+    <script src="{% static 'quiz/js/script.js'%}"></script>
+</body>
+</html>
