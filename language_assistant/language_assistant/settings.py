@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'flashcard.apps.FlashcardConfig',
     'dictionary.apps.DictionaryConfig',
+    'podcast.apps.PodcastConfig',
+    'quiz.apps.QuizConfig',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
