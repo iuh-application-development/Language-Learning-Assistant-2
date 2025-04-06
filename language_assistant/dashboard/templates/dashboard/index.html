@@ -17,7 +17,7 @@
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
                 <!-- <img class="img-fluid" src="{% static 'dashboard/img/carousel-1.jpg' %}" alt=""> -->
-                <img class="img-fluid" src="{% static 'dashboard/img/private_img/1.jpg' %}" alt="">
+                <img class="img-fluid" src="{% static 'dashboard/img/carousel-1.jpg' %}" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
@@ -29,9 +29,9 @@
                                     online courses with certificates</h1>
                                 <p class=" text-white mb-4 pb-2">Explore a wide range of courses designed to enhance
                                     your expertise in technology, business, arts, and more. Start learning today!</p>
-                                <a href="about.html"
+                                <a href="{% url 'dashboard:about' %}"
                                     class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="signup.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join
+                                <a href="{% url 'users:register'%}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join
                                     Now</a>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="owl-carousel-item position-relative">
                 <!-- <img class="img-fluid" src="{% static 'dashboard/img/carousel-2.jpg' %}" alt=""> -->
-                <img class="img-fluid" src="{% static 'dashboard/img/private_img/2.jpg' %}" alt="">
+                <img class="img-fluid" src="{% static 'dashboard/img/carousel-2.jpg' %}" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
@@ -52,9 +52,9 @@
                                 </h1>
                                 <p class=" text-white mb-4 pb-2">Engage with interactive lessons, quizzes, and
                                     projects. Experience hands-on learning that keeps you motivated and inspired.</p>
-                                <a href="about.html"
+                                <a href="{% url 'dashboard:about' %}"
                                     class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="signup.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join
+                                <a href="{% url 'users:register' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join
                                     Now</a>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <!-- <img class="img-fluid position-absolute w-100 h-100" src="{% static 'dashboard/img/about.jpg' %}" alt="" style="object-fit: cover;"> -->
-                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'dashboard/img/private_img/3.jpg' %}" alt="" style="object-fit: cover;">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'dashboard/img/instructor-1.jpg' %}" alt="" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -160,7 +160,7 @@
                             <p class="mb-0"><i class="fa fa-arrow-right me-2"></i>Certification and Recognition</p>
                         </div>
                     </div>
-                    <a class="btn text-light py-3 px-5 mt-2" href="about.html">Read More</a>
+                    <a class="btn text-light py-3 px-5 mt-2" href="{% url 'dashboard:about' %}">Read More</a>
                 </div>
             </div>
         </div>
@@ -180,13 +180,13 @@
                     <p class="mb-4">Start your online learning journey at Great Learning Academy for free with our
                         short-term basic courses across various in-demand domains.</p>
 
-                    <a class="btn text-light py-3 px-5 mt-2" href="signup.html">Start For Free</a>
+                    <a class="btn text-light py-3 px-5 mt-2" href="{% url 'users:register' %}">Start For Free</a>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <!-- <img class="img-fluid position-absolute w-100 h-100" src="{% static 'dashboard/img/about.jpg' %}" alt=""
                         style="object-fit: cover;"> -->
-                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'dashboard/img/private_img/14.jpg' %}" alt=""
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'dashboard/img/instructor-2.jpg' %}" alt=""
                         style="object-fit: cover;">
                     </div>
                 </div>
@@ -309,7 +309,7 @@
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1"><a href="single.html" class="text-dark">HTML Course for Beginners </a></h5>
+                            <h5 class="mb-1"><a href="" class="text-dark">HTML Course for Beginners </a></h5>
                         </div>
                         <div class="d-flex">
                             <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
@@ -683,14 +683,14 @@
 
     <!-- Banner-2 Start -->
     <!-- <section class="pb-5" style="background-image: url('{% static 'dashboard/img/banner-3.jpg' %}');"> -->
-    <section class="pb-5" style="background-image: url(../../static/dashboard/img/private_img/12.jpg);">
+    <section class="pb-5" style="background-image: url(../../static/dashboard/img/background_1.jpg);">
         <div class="container-xxl mt-5" >
             <div class="container" >
                 <div class="row g-5 ">
     
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                         <div class="position-relative h-100">
-                            <img class="img-fluid position-absolute w-100 h-100 bg-light" src="{% static 'dashboard/img/private_img/13.jpg' %}" alt=""
+                            <img class="img-fluid position-absolute w-100 h-100 bg-light" src="{% static 'dashboard/img/ready.jpg' %}" alt=""
                                 style="object-fit: cover;">
                         </div>
                     </div>

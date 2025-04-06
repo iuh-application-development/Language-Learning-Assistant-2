@@ -41,9 +41,7 @@ btn.addEventListener("click", async () => {
         result.innerHTML = `
             <div class="word-title mb-4">
                 <h3 class="mb-0">${inpWord}</h3>
-                <button class="sound-btn" onclick="playSound()">
-                    <i class="fas fa-volume-up fa-lg"></i>
-                </button>
+               
             </div>
 
             <div class="word-details mb-4">

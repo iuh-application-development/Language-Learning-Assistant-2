@@ -106,7 +106,7 @@ const loadChatHistory = () => {
       if (msg.role === "user") {
         messageContent = `<div class="message-text">${msg.parts[0].text}</div>`;
       } else {
-        const botAvatarUrl = "/static/assistant/images/zundamon.webp";  // Đường dẫn tuyệt đối
+        const botAvatarUrl = "/static/assistant/images/OIP.jpg";  // Đường dẫn tuyệt đối
 
         messageContent = `
           <img class="bot-avatar" src="${botAvatarUrl}" alt="Chatbot Logo" width="50" height="50">
@@ -211,7 +211,7 @@ const handleOutgoingMessage = (e) => {
   saveChatHistory();
 
   // Hiển thị hiệu ứng "thinking bubble" của bot
-  const botAvatarUrl = "/static/assistant/images/zundamon.webp"; // Đường dẫn tĩnh tuyệt đối
+  const botAvatarUrl = "/static/assistant/images/OIP.jpg"; // Đường dẫn tĩnh tuyệt đối
   setTimeout(() => {
     const botMessageContent = `
       <img class="bot-avatar" src="${botAvatarUrl}" alt="Chatbot Logo" width="50" height="50">
@@ -384,7 +384,7 @@ newConversationButton.addEventListener("click", () => {
   chatHistory.length = 0;
 
   // Thêm lại tin nhắn chào mừng từ chatbot
-  const botAvatarUrl = "/static/assistant/images/zundamon.webp"; // Đường dẫn tĩnh tuyệt đối
+  const botAvatarUrl = "/static/assistant/images/OIP.jpg"; // Đường dẫn tĩnh tuyệt đối
   const welcomeMessage = `
     <div class="message bot-message">
       <img class="bot-avatar" src="${botAvatarUrl}" alt="Chatbot Logo" width="50" height="50">
