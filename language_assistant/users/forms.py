@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth import get_user_model, authenticate
 from django.contrib.auth.forms import UserCreationForm
+from .models import MyUser
+from django.forms.widgets import ClearableFileInput
 
 User = get_user_model()
 
@@ -61,3 +63,12 @@ class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['email', 'password1', 'password2']
+
+class UserUpdateForm(forms.ModelForm):
+    class Meta:
+        model = MyUser
+        fields = ['username', 'email', 'bio', 'avatar']
+        widgets = {
+            'bio': forms.Textarea(attrs={'rows': 3}),
+            'avatar': ClearableFileInput(attrs={'class': 'form-control'}),
+        }

@@ -1,0 +1,32 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block title %}
+    <title>Edit Profile</title>
+{% endblock %}
+
+{% block content %}
+<h2>Edit Profile</h2>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table class="table">
+        <tr>
+            <th>Username</th>
+            <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ form.email }}</td>
+        </tr>
+        <tr>
+            <th>Bio</th>
+            <td>{{ form.bio }}</td>
+        </tr>
+        <tr>
+            <th>Avatar</th>
+            <td> {{ form.avatar.as_widget }}</td>
+        </tr>
+    </table>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+<a href="{% url 'users:profile' %}" class="btn btn-secondary">Cancel</a>
+{% endblock %}
