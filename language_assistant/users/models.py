@@ -30,7 +30,7 @@ class MyUser(AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
     objects = MyUserManager()
-    avatar = models.ImageField(upload_to='avatars/', default='avatars/default.jpg', blank=True)
+    avatar = models.ImageField(upload_to='avatars/', default='avatars/default.png', blank=True)
     bio = models.TextField(max_length=500, blank=True, default=None, null=True)
 
     
