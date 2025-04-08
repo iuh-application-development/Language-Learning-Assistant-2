@@ -22,7 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('assistant/', include('assistant.urls')),
     path('', include('dashboard.urls')),
-    path('', include('thanks.urls')),
     path('', include('users.urls')),
     path('', include('flashcard.urls')),
     path('', include('dictionary.urls')),

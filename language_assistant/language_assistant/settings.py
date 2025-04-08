@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     # apps
     'assistant.apps.AssistantConfig',
     'dashboard.apps.DashboardConfig',
-    'thanks.apps.ThanksConfig',
     'users.apps.UsersConfig',
     'flashcard.apps.FlashcardConfig',
     'dictionary.apps.DictionaryConfig',
