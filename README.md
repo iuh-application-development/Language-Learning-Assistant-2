@@ -6,6 +6,8 @@
 - **Phan Công Chiến** - *22685651*
 - **Trần Khắc Liêm** - *22685251*
 
+<!-- admin@gmail.com -->
+<!-- IUH@1234 -->
 ---
 
 # Hướng Dẫn Sử Dụng Django
