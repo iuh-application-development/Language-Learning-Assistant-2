@@ -41,14 +41,11 @@ btn.addEventListener("click", async () => {
         result.innerHTML = `
             <div class="word-title mb-4">
                 <h3 class="mb-0">${inpWord}</h3>
-               
             </div>
-
             <div class="word-details mb-4">
                 <span class="badge bg-primary me-2">${data[0].meanings[0].partOfSpeech}</span>
                 <span class="text-muted">/${data[0].phonetic || ''}/</span>
             </div>
-
             <div class="word-meaning mb-4">
                 <h5 class="text-primary mb-3">Nghĩa:</h5>
                 <div class="card bg-light">
@@ -58,7 +55,6 @@ btn.addEventListener("click", async () => {
                     </div>
                 </div>
             </div>
-
             ${examplesHTML ? `
                 <div class="word-examples">
                     <h5 class="text-primary mb-3">Ví dụ:</h5>
@@ -66,15 +62,42 @@ btn.addEventListener("click", async () => {
                 </div>
             ` : ''}`;
 
-        if(data[0].phonetics[0]?.audio) {
-            sound.setAttribute("src", `https:${data[0].phonetics[0].audio}`);
-        }
+        // Cập nhật giá trị cho các trường ẩn
+        document.getElementById("flashcard-question").value = inpWord;
+        document.getElementById("flashcard-answer").value = vietnameseMeaning;
+
+        // Hiển thị form thêm flashcard
+        document.getElementById("add-flashcard-form").style.display = "block";
     } catch (error) {
         result.innerHTML = `
             <div class="alert alert-danger" role="alert">
                 <i class="fas fa-exclamation-circle me-2"></i>
                 Không tìm thấy từ này trong từ điển
             </div>`;
+    }
+});
+
+// Xử lý sự kiện submit form thêm flashcard
+document.getElementById("add-flashcard-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    
+    try {
+        const response = await fetch('/dictionary/', {  // Đường dẫn đến view dictionary
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken'), // Lấy CSRF token
+            },
+        });
+        const result = await response.json();
+        if (result.success) {
+            alert('Flashcard đã được tạo thành công!');
+        } else {
+            alert('Có lỗi xảy ra: ' + result.error);
+        }
+    } catch (error) {
+        console.error('Error:', error);
     }
 });
 
