@@ -37,26 +37,28 @@
             <!-- Result Area -->
             <div class="result mt-4" id="result">
               <!-- Results will be displayed here via JavaScript -->
-              <div class="add-flashcard mt-4">
-                <h5 class="text-primary mb-3">Tạo Flashcard:</h5>
-                <form id="add-flashcard-form">
-                    <input type="hidden" id="flashcard-question" name="word" />
-                    <input type="hidden" id="flashcard-answer" name="meaning" />
-                    <div class="mb-3">
-                        <label for="category-select" class="form-label">Chọn Category:</label>
-                        <select id="category-select" name="category">
-                            {% for category in categories %}
-                                <option value="{{ category.id }}">{{ category.name }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Tạo Flashcard</button>
-                </form>
-            </div>
+              
             </div>
           </div>
         </div>
       </div>
+      <div class="add-flashcard mt-4 col-lg-8">
+        <h5 class="text-primary mb-3">Tạo Flashcard:</h5>
+        <form id="add-flashcard-form">
+            <input type="hidden" id="flashcard-question" name="word" />
+            <input type="hidden" id="flashcard-answer" name="meaning" />
+            <div class="mb-3">
+                <label for="category-select" class="form-label">Chọn Category:</label>
+                <select id="category-select" name="category">
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Tạo Flashcard</button>
+        </form>
+      </div>
+
     </div>
   </div>
 </div>

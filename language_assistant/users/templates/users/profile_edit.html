@@ -24,9 +24,13 @@
         <tr>
             <th>Avatar</th>
             <td> {{ form.avatar.as_widget }}</td>
-        </tr>
+        </tr>aa
     </table>
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <div class="d-flex justify-content-end mt-4">
+        <a href="{% url 'users:profile' %}" class="btn btn-outline-secondary me-2">Cancel</a>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </div>
+
+
 </form>
-<a href="{% url 'users:profile' %}" class="btn btn-secondary">Cancel</a>
 {% endblock %}
