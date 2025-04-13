@@ -167,11 +167,12 @@
 
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
-        display: block;
-        margin-top: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
+        position: absolute;
+        right: 0; /* Đảm bảo dropdown căn chỉnh bên phải */
+        left: auto; /* Vô hiệu hóa căn chỉnh bên trái */
+        max-width: 200px; /* Giới hạn chiều rộng */
+        overflow: hidden; /* Ẩn nội dung tràn */
+        z-index: 1050;
     }
 
     .navbar .dropdown-menu.fade-down {
