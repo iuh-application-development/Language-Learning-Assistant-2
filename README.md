@@ -15,6 +15,29 @@ Xuất phát từ triết lý: "Mỗi người đều xứng đáng có một tr
 - **📚 Gợi ý từ vựng theo chủ đề**: Mở rộng vốn từ theo lĩnh vực bạn quan tâm
 - **📈 Theo dõi tiến độ học tập**: Cá nhân hóa lộ trình học phù hợp với mục tiêu của bạn
 
+## 🛠️ Công nghệ và ứng dụng đã sử dụng
+
+### Công nghệ chính
+- **Python**: Ngôn ngữ lập trình chính để phát triển backend.
+- **Django**: Framework web mạnh mẽ và linh hoạt cho backend.
+- **HTML/CSS/JavaScript**: Xây dựng giao diện người dùng.
+- **Bootstrap**: Framework CSS để thiết kế giao diện responsive.
+- **SQLite**: Cơ sở dữ liệu mặc định cho phát triển và thử nghiệm.
+- **Docker**: Đóng gói và triển khai ứng dụng dễ dàng.
+
+### Ứng dụng hỗ trợ
+- **Git**: Quản lý mã nguồn và cộng tác nhóm.
+- **Visual Studio Code**: IDE chính để phát triển.
+- **Google Translate API**: Hỗ trợ dịch thuật.
+- **OpenAI API**: Tích hợp trí tuệ nhân tạo của OpenAI.
+- **Gemini API**: Tích hợp trí tuệ nhân tạo của Google.
+- **Free Dictionary API**: Hỗ trợ tra cứu từ điển
+- **Opentdb API**: Kho lưu trữ câu hỏi miễn phí
+
+### Lý do lựa chọn
+Các công nghệ và ứng dụng trên được lựa chọn để đảm bảo hiệu suất, tính linh hoạt và khả năng mở rộng của dự án, đồng thời hỗ trợ nhóm phát triển làm việc hiệu quả và nhanh chóng.
+
+
 ## 🛠️ Hướng dẫn cài đặt
 
 ### Yêu cầu hệ thống
@@ -173,7 +196,7 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 - **GitHub Issues:** 
 ## 📜 Giấy phép
 
-
+![alt text](language_assistant/media/avatars/stelle-at-the-beach-by-かぼす-v0-cjoexsbi6dbd1.gif)
 ---
 
 
@@ -185,7 +208,6 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 | Trần Thái Nguyên | 22697051 | Backend Developer | | [link](https://github.com/PlusNguyn) |
 | Phan Công Chiến | 22685651 | Frontend Developer | |  |
 | Trần Khắc Liêm | 22685251 | UI/UX Designer | |  |
-
 
 
 ---
