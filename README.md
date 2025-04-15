@@ -1,136 +1,187 @@
-#  ỨNG DỤNG TRỢ LÝ NGÔN NGỮ - LANGUAGE ASSISTANT
+# 🌏 LANGUAGE ASSISTANT - TRỢ LÝ NGÔN NGỮ CÁ NHÂN
 
-🌍 Về Language Assistant
-Chào mừng bạn đến với Language Assistant – trợ lý ngôn ngữ cá nhân của bạn!
+![Language Assistant Logo](https://via.placeholder.com/150)
 
-✨ Chúng tôi là ai?
-Language Assistant là một nền tảng hỗ trợ học và sử dụng ngoại ngữ, được xây dựng với mong muốn giúp mọi người vượt qua rào cản ngôn ngữ trong học tập, công việc và cuộc sống hàng ngày.
+## 📝 Giới thiệu
 
-Bắt đầu từ một ý tưởng đơn giản: "Nếu mỗi người đều có một trợ lý ngôn ngữ riêng, việc học ngoại ngữ sẽ dễ dàng và thú vị hơn rất nhiều!" – chúng tôi đã phát triển nên một ứng dụng thông minh, thân thiện và đầy cảm hứng cho người học ngôn ngữ ở mọi cấp độ.
+Language Assistant là nền tảng hỗ trợ học và sử dụng ngoại ngữ thông minh, được thiết kế để giúp người dùng vượt qua rào cản ngôn ngữ trong học tập, công việc và cuộc sống hàng ngày.
 
-⚙️ Language Assistant có thể giúp bạn:
-✏️ Dịch thuật thông minh: Hỗ trợ dịch đa ngôn ngữ với văn phong tự nhiên, giữ đúng ngữ cảnh, có ví dụ minh họa rõ ràngràng.
+Xuất phát từ triết lý: "Mỗi người đều xứng đáng có một trợ lý ngôn ngữ riêng", chúng tôi mang đến công cụ đa năng, thông minh và trực quan cho người học ở mọi trình độ.
 
-<!-- 🧠 Sửa lỗi ngữ pháp và chính tả: Phân tích và gợi ý cách viết chuẩn xác hơn. -->
+## ✨ Tính năng chính
 
-<!-- 🗣️ Luyện phát âm với AI: Nhận phản hồi tức thì và điều chỉnh phát âm theo giọng bản xứ. -->
+- **🔤 Dịch thuật thông minh**: Hỗ trợ dịch đa ngôn ngữ với văn phong tự nhiên, bám sát ngữ cảnh và cung cấp ví dụ minh họa
+- **💬 Hội thoại tương tác**: Mô phỏng giao tiếp thực tế để rèn luyện phản xạ ngôn ngữ
+- **📚 Gợi ý từ vựng theo chủ đề**: Mở rộng vốn từ theo lĩnh vực bạn quan tâm
+- **📈 Theo dõi tiến độ học tập**: Cá nhân hóa lộ trình học phù hợp với mục tiêu của bạn
 
-💬 Hội thoại song ngữ: Giao tiếp mô phỏng hội thoại thực tế để luyện phản xạ ngôn ngữ.
+## 🛠️ Hướng dẫn cài đặt
 
-📚 Gợi ý từ vựng theo ngữ cảnh: Mở rộng vốn từ theo chủ đề bạn đang học.
+### Yêu cầu hệ thống
+- Python 3.8 trở lên
+- Git
+- Pip (Python Package Installer)
 
-📈 Theo dõi tiến độ học tập: Cá nhân hóa lộ trình học theo trình độ và mục tiêu của bạn.
+### 1. Cài đặt Git (nếu chưa có)
 
-🎯 Tầm nhìn của chúng tôi
-Chúng tôi tin rằng ngôn ngữ là chìa khóa kết nối thế giới.
-Mục tiêu của chúng tôi là trở thành người bạn đồng hành đáng tin cậy cho hàng triệu người học ngôn ngữ trên toàn cầu, mang lại trải nghiệm học tập nhẹ nhàng, hiệu quả và đầy cảm hứng.
+**Windows:**
+- Tải Git tại: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+- Chạy file `.exe` và làm theo hướng dẫn cài đặt
 
-🤝 Tham gia cùng chúng tôi!
-Dù bạn là người mới bắt đầu hay đã học nhiều năm, Language Assistant luôn sẵn sàng đồng hành cùng bạn.
-👉 Hãy bắt đầu miễn phí hôm nay – và khám phá cách học ngoại ngữ thú vị hơn bạn từng nghĩ!
-
-Nếu bạn có bất kỳ góp ý, câu hỏi hay mong muốn hợp tác, đừng ngần ngại liên hệ với chúng tôi qua email.
-
-
-<!-- admin@gmail.com -->
-<!-- IUH@1234 -->
-
----
-# Hướng Dẫn Sử Dụng Django
-
-
-## **1. Chạy Server Django**
-```bash
-python manage.py runserver
-```
-- Khởi động server phát triển của Django.  
-- Mặc định chạy tại `http://127.0.0.1:8000/`.  
-- Dừng server bằng **`Ctrl + C`**.  
-
----
-
-## **2. Tạo Và Áp Dụng Migrations**
-### **Tạo File Migration**
-```bash
-python manage.py makemigrations
-```
-- Tạo file migration sau khi chỉnh sửa models.  
-
-### **Áp Dụng Migration**
-```bash
-python manage.py migrate
-```
-- Cập nhật database theo các file migration đã tạo.  
-
----
-
-## **3. Tạo Tài Khoản Admin**
-```bash
-python manage.py createsuperuser
-```
-- Tạo tài khoản quản trị viên để đăng nhập vào `/admin`.  
-- Nhập thông tin:  
-  - **Username**  
-  - **Email** *(tuỳ chọn)*  
-  - **Password**  
-
----
-
-## **4. Mở Django Shell**
-```bash
-python manage.py shell
-```
-- Mở Python shell để thử nghiệm lệnh hoặc truy vấn dữ liệu.  
-
----
-
-## **5. Lưu Ý Quan Trọng**
-- Kích hoạt môi trường ảo trước khi chạy lệnh (nếu có):  
-  ```bash
-  source venv/bin/activate  # Linux/Mac
-  venv\Scripts\activate     # Windows
-  ```
-- Kiểm tra phiên bản Django:  
-  ```bash
-  python -m django --version
-  ```
-
-# Hướng dẫn clone responsitory
----
-
-## 🧩 1. Cài đặt Git (nếu chưa có)
-
-### 🖥 Trên Windows:
-Tải Git tại: [https://git-scm.com/download/win](https://git-scm.com/download/win)  
-Chạy file `.exe` và cài đặt như phần mềm bình thường.
-
-### 💻 Trên Ubuntu/Debian:
+**Ubuntu/Debian:**
 ```bash
 sudo apt update
 sudo apt install git
 ```
 
----
-
-## 📥 2. Clone repository
-
-### 🧪 Cú pháp:
-
-Clone vềvề repo trên GitHub:
+**macOS:**
 ```bash
+brew install git
+```
+
+### 2. Clone repository
+
+```bash
+# Sử dụng HTTPS
 git clone https://github.com/iuh-application-development/Language-Learning-Assistant-2.git
-```
 
-Hoặc nếu bạn dùng SSH (bắt buộc phải có SSH key):
-```bash
+# Hoặc sử dụng SSH (cần cấu hình SSH key)
 git clone git@github.com:iuh-application-development/Language-Learning-Assistant-2.git
+
+# Di chuyển vào thư mục dự án
+cd Language-Learning-Assistant-2
 ```
 
+### 3. Cài đặt môi trường ảo và các phụ thuộc
+
+**Windows:**
+```bash
+# Tạo môi trường ảo
+python -m venv venv
+
+# Kích hoạt môi trường ảo
+venv\Scripts\activate
+
+# Cài đặt các gói phụ thuộc
+pip install -r requirements.txt
+```
+
+**Linux/macOS:**
+```bash
+# Tạo môi trường ảo
+python3 -m venv venv
+
+# Kích hoạt môi trường ảo
+source venv/bin/activate
+
+# Cài đặt các gói phụ thuộc
+pip install -r requirements.txt
+```
+
+### 4. Khởi động nhanh
+
+Để cài đặt và chạy ứng dụng nhanh chóng, bạn có thể sử dụng script tự động:
+
+**Windows:**
+```bash
+# Chạy file cài đặt tự động
+install.bat
+```
+
+**Linux/macOS:**
+```bash
+# Cấp quyền thực thi cho script
+chmod +x install.sh
+
+# Chạy script cài đặt
+./install.sh
+```
+
+## 🚀 Hướng dẫn sử dụng Django
+
+### Chạy Server Django
+
+```bash
+python manage.py runserver
+```
+- Server phát triển sẽ chạy tại địa chỉ mặc định: `http://127.0.0.1:8000/`
+- Để dừng server, nhấn `Ctrl + C`
+
+### Quản lý Database (Migrations)
+
+```bash
+# Tạo file migration khi thay đổi models
+python manage.py makemigrations
+
+# Áp dụng migrations vào database
+python manage.py migrate
+```
+
+### Tạo tài khoản quản trị viên
+
+```bash
+python manage.py createsuperuser
+```
+- Làm theo hướng dẫn để nhập thông tin tài khoản
+- Sử dụng tài khoản này để đăng nhập tại đường dẫn `/admin`
+
+### Công cụ phát triển và thử nghiệm
+
+```bash
+# Mở Django shell để thử nghiệm code và truy vấn dữ liệu
+python manage.py shell
+
+# Kiểm tra phiên bản Django đang sử dụng
+python -m django --version
+```
+
+## 🔍 Cấu trúc dự án
+
+```
+Language-Learning-Assistant-2/
+├── language_assistant/       # Thư mục chính của dự án Django
+│   ├── manage.py            # Script quản lý Django
+│   ├── language_assistant/  # Package cấu hình dự án
+│   ├── users/              # App quản lý người dùng
+│   ├── translator/         # App dịch thuật
+│   └── vocabulary/         # App quản lý từ vựng
+├── requirements.txt        # Danh sách các phụ thuộc
+├── install.bat             # Script cài đặt cho Windows
+├── install.sh              # Script cài đặt cho Linux/macOS
+└── README.md               # Tài liệu hướng dẫn (file này)
+```
+
+## 🤝 Đóng góp
+
+Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn muốn tham gia phát triển dự án:
+
+1. Fork repository này
+2. Tạo nhánh tính năng (`git checkout -b feature/amazing-feature`)
+3. Commit thay đổi của bạn (`git commit -m 'Add some amazing feature'`)
+4. Push lên nhánh đã tạo (`git push origin feature/amazing-feature`)
+5. Mở Pull Request
+
+## 📞 Liên hệ và hỗ trợ
+
+- **Email:**
+- **Website:** 
+- **GitHub Issues:** 
+## 📜 Giấy phép
+
+
 ---
 
-# Hướng dẫn chạy ứng dụng
 
-Chạy file `install.bat` để khởi động ứng dụng
+## 👥 Đội ngũ phát triển
+
+| Họ và tên | Mã số sinh viên | Vai trò | Email | GitHub |
+|-----------|----------------|---------|-------|--------|
+| Nguyễn Ngọc Minh | 20000000 | Team Leader |  | [@PlusNguyn]https://github.com/PlusNguyn |
+| Trần Thái Nguyên | 20000001 | Backend Developer | |  |
+| Phan Công Chiến | 20000002 | Frontend Developer | |  |
+| Trần Khắc Liêm | 20000003 | UI/UX Designer | |  |
+
+
 
 ---
-
+© 2025 Language Assistant Team. All rights reserved
