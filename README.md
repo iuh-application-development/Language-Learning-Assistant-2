@@ -176,10 +176,10 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 
 | Họ và tên | Mã số sinh viên | Vai trò | Email | GitHub |
 |-----------|----------------|---------|-------|--------|
-| Nguyễn Ngọc Minh | 20000000 | Team Leader |  | [@PlusNguyn]https://github.com/PlusNguyn |
-| Trần Thái Nguyên | 20000001 | Backend Developer | |  |
-| Phan Công Chiến | 20000002 | Frontend Developer | |  |
-| Trần Khắc Liêm | 20000003 | UI/UX Designer | |  |
+| Nguyễn Ngọc Minh | 22685841 | Team Leader |  | [@PlusNguyn]https://github.com/PlusNguyn |
+| Trần Thái Nguyên | 22697051 | Backend Developer | |  |
+| Phan Công Chiến | 22685651 | Frontend Developer | |  |
+| Trần Khắc Liêm | 22685251 | UI/UX Designer | |  |
 
 
 
