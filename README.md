@@ -97,6 +97,12 @@ chmod +x install.sh
 ./install.sh
 ```
 
+# Hướng dẫn build docker image
+ Nhập lệnh 
+ ```
+ docker build -t LanAssist .
+ ```
+
 ## 🚀 Hướng dẫn sử dụng Django
 
 ### Chạy Server Django
@@ -137,19 +143,8 @@ python -m django --version
 
 ## 🔍 Cấu trúc dự án
 
-```
-Language-Learning-Assistant-2/
-├── language_assistant/       # Thư mục chính của dự án Django
-│   ├── manage.py            # Script quản lý Django
-│   ├── language_assistant/  # Package cấu hình dự án
-│   ├── users/              # App quản lý người dùng
-│   ├── translator/         # App dịch thuật
-│   └── vocabulary/         # App quản lý từ vựng
-├── requirements.txt        # Danh sách các phụ thuộc
-├── install.bat             # Script cài đặt cho Windows
-├── install.sh              # Script cài đặt cho Linux/macOS
-└── README.md               # Tài liệu hướng dẫn (file này)
-```
+Tham khảo structure.txt
+
 
 ## 🤝 Đóng góp
 

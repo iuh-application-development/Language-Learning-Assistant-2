@@ -55,6 +55,17 @@ if exist "language_assistant" (
     exit /b 1
 )
 
+:: Run migrations
+echo Running migrations...
+python manage.py migrate
+
+if %errorlevel% neq 0 (
+    echo Failed to run migrations.
+    pause
+    exit /b 1
+)
+echo Migrations completed successfully.
+
 :: Open browser
 echo Opening browser...
 start http://localhost:8000/
