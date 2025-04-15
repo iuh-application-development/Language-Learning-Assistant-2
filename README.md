@@ -1,4 +1,4 @@
-# 🌏 LANGUAGE ASSISTANT - TRỢ LÝ NGÔN NGỮ CÁ NHÂN
+# 🌏 LANGUAGE ASSISTANT - TRỢ LÝ NGÔN NGỮ
 
 ![alt text](image.png)
 
@@ -97,15 +97,31 @@ chmod +x install.sh
 ./install.sh
 ```
 
+# Hướng dẫn build docker image
+ Nhập lệnh 
+ ```
+ docker build -t LanAssist .
+ ```
+
 ## 🚀 Hướng dẫn sử dụng Django
 
 ### Chạy Server Django
+
+Di chuyển vào thư mục language_assistant
+```bash
+cd language_assistant
+```
+Khởi động server
 
 ```bash
 python manage.py runserver
 ```
 - Server phát triển sẽ chạy tại địa chỉ mặc định: `http://127.0.0.1:8000/`
 - Để dừng server, nhấn `Ctrl + C`
+
+### Truy cập trang admin(cần tạo superuser trước)
+
+- Trang admin sẽ chạy tại địa chỉ mặc định: `http://127.0.0.1:8000/admin`
 
 ### Quản lý Database (Migrations)
 
@@ -137,19 +153,8 @@ python -m django --version
 
 ## 🔍 Cấu trúc dự án
 
-```
-Language-Learning-Assistant-2/
-├── language_assistant/       # Thư mục chính của dự án Django
-│   ├── manage.py            # Script quản lý Django
-│   ├── language_assistant/  # Package cấu hình dự án
-│   ├── users/              # App quản lý người dùng
-│   ├── translator/         # App dịch thuật
-│   └── vocabulary/         # App quản lý từ vựng
-├── requirements.txt        # Danh sách các phụ thuộc
-├── install.bat             # Script cài đặt cho Windows
-├── install.sh              # Script cài đặt cho Linux/macOS
-└── README.md               # Tài liệu hướng dẫn (file này)
-```
+Tham khảo structure.txt
+
 
 ## 🤝 Đóng góp
 
@@ -176,8 +181,8 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 
 | Họ và tên | Mã số sinh viên | Vai trò | Email | GitHub |
 |-----------|----------------|---------|-------|--------|
-| Nguyễn Ngọc Minh | 22685841 | Team Leader |  | [@PlusNguyn]https://github.com/PlusNguyn |
-| Trần Thái Nguyên | 22697051 | Backend Developer | |  |
+| Nguyễn Ngọc Minh | 22685841 | Team Leader |  |  |
+| Trần Thái Nguyên | 22697051 | Backend Developer | | [link](https://github.com/PlusNguyn) |
 | Phan Công Chiến | 22685651 | Frontend Developer | |  |
 | Trần Khắc Liêm | 22685251 | UI/UX Designer | |  |
 

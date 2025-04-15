@@ -1,1 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+/language_assistant/db.sqlite3
+
+# Virtual environments
 venv/
+env/
+
+# Editors
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
