@@ -1,10 +1,36 @@
-# Nhóm 21
+#  ỨNG DỤNG TRỢ LÝ NGÔN NGỮ - LANGUAGE ASSISTANT
 
-## Thành viên:
-- **Trần Thái Nguyên** - *22697051*
-- **Nguyễn Ngọc Minh** - *22685841*
-- **Phan Công Chiến** - *22685651*
-- **Trần Khắc Liêm** - *22685251*
+🌍 Về Language Assistant
+Chào mừng bạn đến với Language Assistant – trợ lý ngôn ngữ cá nhân của bạn!
+
+✨ Chúng tôi là ai?
+Language Assistant là một nền tảng hỗ trợ học và sử dụng ngoại ngữ, được xây dựng với mong muốn giúp mọi người vượt qua rào cản ngôn ngữ trong học tập, công việc và cuộc sống hàng ngày.
+
+Bắt đầu từ một ý tưởng đơn giản: "Nếu mỗi người đều có một trợ lý ngôn ngữ riêng, việc học ngoại ngữ sẽ dễ dàng và thú vị hơn rất nhiều!" – chúng tôi đã phát triển nên một ứng dụng thông minh, thân thiện và đầy cảm hứng cho người học ngôn ngữ ở mọi cấp độ.
+
+⚙️ Language Assistant có thể giúp bạn:
+✏️ Dịch thuật thông minh: Hỗ trợ dịch đa ngôn ngữ với văn phong tự nhiên, giữ đúng ngữ cảnh, có ví dụ minh họa rõ ràngràng.
+
+<!-- 🧠 Sửa lỗi ngữ pháp và chính tả: Phân tích và gợi ý cách viết chuẩn xác hơn. -->
+
+<!-- 🗣️ Luyện phát âm với AI: Nhận phản hồi tức thì và điều chỉnh phát âm theo giọng bản xứ. -->
+
+💬 Hội thoại song ngữ: Giao tiếp mô phỏng hội thoại thực tế để luyện phản xạ ngôn ngữ.
+
+📚 Gợi ý từ vựng theo ngữ cảnh: Mở rộng vốn từ theo chủ đề bạn đang học.
+
+📈 Theo dõi tiến độ học tập: Cá nhân hóa lộ trình học theo trình độ và mục tiêu của bạn.
+
+🎯 Tầm nhìn của chúng tôi
+Chúng tôi tin rằng ngôn ngữ là chìa khóa kết nối thế giới.
+Mục tiêu của chúng tôi là trở thành người bạn đồng hành đáng tin cậy cho hàng triệu người học ngôn ngữ trên toàn cầu, mang lại trải nghiệm học tập nhẹ nhàng, hiệu quả và đầy cảm hứng.
+
+🤝 Tham gia cùng chúng tôi!
+Dù bạn là người mới bắt đầu hay đã học nhiều năm, Language Assistant luôn sẵn sàng đồng hành cùng bạn.
+👉 Hãy bắt đầu miễn phí hôm nay – và khám phá cách học ngoại ngữ thú vị hơn bạn từng nghĩ!
+
+Nếu bạn có bất kỳ góp ý, câu hỏi hay mong muốn hợp tác, đừng ngần ngại liên hệ với chúng tôi qua email.
+
 
 <!-- admin@gmail.com -->
 <!-- IUH@1234 -->
@@ -70,8 +96,6 @@ python manage.py shell
   ```
 
 # Hướng dẫn clone responsitory
-Chắc chắn rồi! Dưới đây là hướng dẫn chi tiết cách **clone một repository** từ GitHub hoặc GitLab về máy tính của bạn.
-
 ---
 
 ## 🧩 1. Cài đặt Git (nếu chưa có)
@@ -107,4 +131,6 @@ git clone git@github.com:iuh-application-development/Language-Learning-Assistant
 # Hướng dẫn chạy ứng dụng
 
 Chạy file `install.bat` để khởi động ứng dụng
+
+---
 
