@@ -8,9 +8,10 @@
 
 <!-- admin@gmail.com -->
 <!-- IUH@1234 -->
----
 
+---
 # Hướng Dẫn Sử Dụng Django
+
 
 ## **1. Chạy Server Django**
 ```bash
@@ -67,4 +68,43 @@ python manage.py shell
   ```bash
   python -m django --version
   ```
+
+# Hướng dẫn clone responsitory
+Chắc chắn rồi! Dưới đây là hướng dẫn chi tiết cách **clone một repository** từ GitHub hoặc GitLab về máy tính của bạn.
+
+---
+
+## 🧩 1. Cài đặt Git (nếu chưa có)
+
+### 🖥 Trên Windows:
+Tải Git tại: [https://git-scm.com/download/win](https://git-scm.com/download/win)  
+Chạy file `.exe` và cài đặt như phần mềm bình thường.
+
+### 💻 Trên Ubuntu/Debian:
+```bash
+sudo apt update
+sudo apt install git
+```
+
+---
+
+## 📥 2. Clone repository
+
+### 🧪 Cú pháp:
+
+Clone vềvề repo trên GitHub:
+```bash
+git clone https://github.com/iuh-application-development/Language-Learning-Assistant-2.git
+```
+
+Hoặc nếu bạn dùng SSH (bắt buộc phải có SSH key):
+```bash
+git clone git@github.com:iuh-application-development/Language-Learning-Assistant-2.git
+```
+
+---
+
+# Hướng dẫn chạy ứng dụng
+
+Chạy file `install.bat` để khởi động ứng dụng
 
