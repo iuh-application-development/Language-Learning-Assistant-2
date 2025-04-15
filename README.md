@@ -1,6 +1,6 @@
 # 🌏 LANGUAGE ASSISTANT - TRỢ LÝ NGÔN NGỮ CÁ NHÂN
 
-![Language Assistant Logo](https://via.placeholder.com/150)
+![alt text](image.png)
 
 ## 📝 Giới thiệu
 
