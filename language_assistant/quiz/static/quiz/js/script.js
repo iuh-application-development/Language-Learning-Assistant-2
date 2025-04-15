@@ -11,12 +11,12 @@ const _totalQuestion = document.getElementById('total-question');
 let correctAnswer = "",
     correctScore = 0,
     askedCount = 0,
-    totalQuestion = 25,
+    totalQuestion = 10,
     questions = []; // <-- chứa danh sách 10 câu hỏi lấy từ API
 
 // load câu hỏi từ API
 async function loadQuestionFromAPI() {
-    const APIUrl = 'https://opentdb.com/api.php?amount=25&type=multiple';
+    const APIUrl = 'https://opentdb.com/api.php?amount=10&category=31';
     const result = await fetch(APIUrl);
     const data = await result.json();
     questions = data.results;
