@@ -1,4 +1,4 @@
-# 🌏 LANGUAGE ASSISTANT - TRỢ LÝ NGÔN NGỮ CÁ NHÂN
+# 🌏 LANGUAGE ASSISTANT - TRỢ LÝ NGÔN NGỮ
 
 ![alt text](image.png)
 
@@ -107,11 +107,21 @@ chmod +x install.sh
 
 ### Chạy Server Django
 
+Di chuyển vào thư mục language_assistant
+```bash
+cd language_assistant
+```
+Khởi động server
+
 ```bash
 python manage.py runserver
 ```
 - Server phát triển sẽ chạy tại địa chỉ mặc định: `http://127.0.0.1:8000/`
 - Để dừng server, nhấn `Ctrl + C`
+
+### Truy cập trang admin(cần tạo superuser trước)
+
+- Trang admin sẽ chạy tại địa chỉ mặc định: `http://127.0.0.1:8000/admin`
 
 ### Quản lý Database (Migrations)
 
@@ -171,8 +181,8 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 
 | Họ và tên | Mã số sinh viên | Vai trò | Email | GitHub |
 |-----------|----------------|---------|-------|--------|
-| Nguyễn Ngọc Minh | 22685841 | Team Leader |  | [@PlusNguyn]https://github.com/PlusNguyn |
-| Trần Thái Nguyên | 22697051 | Backend Developer | |  |
+| Nguyễn Ngọc Minh | 22685841 | Team Leader |  |  |
+| Trần Thái Nguyên | 22697051 | Backend Developer | | [link](https://github.com/PlusNguyn) |
 | Phan Công Chiến | 22685651 | Frontend Developer | |  |
 | Trần Khắc Liêm | 22685251 | UI/UX Designer | |  |
 
