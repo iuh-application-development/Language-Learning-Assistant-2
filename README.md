@@ -205,7 +205,7 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 | Họ và tên | Mã số sinh viên | Vai trò | Email | GitHub |
 |-----------|----------------|---------|-------|--------|
 | Nguyễn Ngọc Minh | 22685841 | Team Leader |  |  |
-| Trần Thái Nguyên(nguynthichxemset) | 22697051 | Backend Developer | tnguyenz2520@gmail.com | [Link](https://github.com/PlusNguyn) |
+| Trần Thái Nguyên | 22697051 | Backend Developer | tnguyenz2520@gmail.com | [Link](https://github.com/PlusNguyn) |
 | Phan Công Chiến | 22685651 | Frontend Developer | |  |
 | Trần Khắc Liêm | 22685251 | UI/UX Designer | |  |
 
