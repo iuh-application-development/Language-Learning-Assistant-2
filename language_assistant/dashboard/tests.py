@@ -1,10 +1,10 @@
+from django.test import Client, TestCase
 from django.test import TestCase, Client
 from django.urls import reverse
 
 # Create your tests here.
 class DashboardViewTests(TestCase):
 
-    # TEST HOME PAGE
     def setUp(self):
         self.client = Client()
         self.url = reverse('dashboard:home')  # Replace with your actual URL name

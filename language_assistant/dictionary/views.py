@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from flashcard.models import Category, Flashcard
 from django.http import JsonResponse
+from django.core.exceptions import ObjectDoesNotExist
 
 @login_required
 def dictionary(request):
@@ -11,7 +12,10 @@ def dictionary(request):
         word = request.POST.get('word')
         vietnamese_meaning = request.POST.get('meaning')  # Lấy nghĩa từ POST
         category_id = request.POST.get('category')
-        category = Category.objects.get(id=category_id)
+        try:
+            category = Category.objects.get(id=category_id)
+        except ObjectDoesNotExist:
+            return JsonResponse({'success': False, 'error': 'Category does not exist'}, status=400)
 
         # Tạo flashcard
         flashcard = Flashcard.objects.create(
