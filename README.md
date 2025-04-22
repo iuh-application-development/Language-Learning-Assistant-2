@@ -12,14 +12,13 @@ Xuất phát từ triết lý: "Mỗi người đều xứng đáng có một tr
 
 - **🔤 Dịch thuật thông minh**: Hỗ trợ dịch đa ngôn ngữ với văn phong tự nhiên, bám sát ngữ cảnh và cung cấp ví dụ minh họa
 - **💬 Hội thoại tương tác**: Mô phỏng giao tiếp thực tế để rèn luyện phản xạ ngôn ngữ
-- **📚 Gợi ý từ vựng theo chủ đề**: Mở rộng vốn từ theo lĩnh vực bạn quan tâm
-- **📈 Theo dõi tiến độ học tập**: Cá nhân hóa lộ trình học phù hợp với mục tiêu của bạn
+- **📚 Tích hợp từ điển**: Hỗ trợ tra cứu từ ngữ nhanh chóng và dễ dàng
+- **📈 Bộ câu hỏi giải trí**: Sở hữu bộ câu hỏi bằng tiếng anh để giải trí và thêm vốn từ vựng
 
 ## 🛠️ Công nghệ và ứng dụng đã sử dụng
 
 ### Công nghệ chính
 - **Python**: Ngôn ngữ lập trình chính để phát triển backend.
-- **Django**: Framework web mạnh mẽ và linh hoạt cho backend.
 - **HTML/CSS/JavaScript**: Xây dựng giao diện người dùng.
 - **Bootstrap**: Framework CSS để thiết kế giao diện responsive.
 - **SQLite**: Cơ sở dữ liệu mặc định cho phát triển và thử nghiệm.
@@ -28,8 +27,6 @@ Xuất phát từ triết lý: "Mỗi người đều xứng đáng có một tr
 ### Ứng dụng hỗ trợ
 - **Git**: Quản lý mã nguồn và cộng tác nhóm.
 - **Visual Studio Code**: IDE chính để phát triển.
-- **Google Translate API**: Hỗ trợ dịch thuật.
-- **OpenAI API**: Tích hợp trí tuệ nhân tạo của OpenAI.
 - **Gemini API**: Tích hợp trí tuệ nhân tạo của Google.
 - **Free Dictionary API**: Hỗ trợ tra cứu từ điển
 - **Opentdb API**: Kho lưu trữ câu hỏi miễn phí
@@ -191,12 +188,8 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 
 ## 📞 Liên hệ và hỗ trợ
 
-- **Email:**
-- **Website:** 
-- **GitHub Issues:** 
-## 📜 Giấy phép
-
-![alt text](language_assistant/media/avatars/stelle-at-the-beach-by-かぼす-v0-cjoexsbi6dbd1.gif)
+- **Email: minhnguyen47431@gmail.com**
+- **Website: https://www.facebook.com/profile.php?id=100027733654960&mibextid=LQQJ4d** 
 ---
 
 
@@ -204,10 +197,10 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 
 | Họ và tên | Mã số sinh viên | Vai trò | Email | GitHub |
 |-----------|----------------|---------|-------|--------|
-| Nguyễn Ngọc Minh | 22685841 | Team Leader |  |  |
-| Trần Thái Nguyên | 22697051 | Backend Developer | tnguyenz2520@gmail.com | [Link](https://github.com/PlusNguyn) |
-| Phan Công Chiến | 22685651 | Frontend Developer | |  |
-| Trần Khắc Liêm | 22685251 | UI/UX Designer | |  |
+| Nguyễn Ngọc Minh | 22685841 | Team Leader | minhnguyen47431@gmail.com | [Link](https://github.com/xiaoMing-04) |
+| Trần Thái Nguyên | 22697051 | Frontend Developer | tnguyenz2520@gmail.com | [Link](https://github.com/PlusNguyn) |
+| Phan Công Chiến | 22685651 | Backend Developer | phancongchien8278@gmail.com |  [Link](https://github.com/chien24)|
+| Trần Khắc Liêm | 22685251 | UI/UX Designer | liemem147852@gmail.com | [Link](https://github.com/T-K-Liem275) |
 
 ---
 © 2025 Language Assistant Team. All rights reserved
