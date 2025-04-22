@@ -45,4 +45,32 @@ class DashboardViewTests(TestCase):
         response = self.client.get(reverse('dashboard:contact'))  
         self.assertTemplateUsed(response, 'dashboard/contact.html')
 
+    # TEST LOGIN PAGE
+
+    def test_login_view_status_code(self):
+        response = self.client.get(reverse('users:login'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_login_view_template_used(self):
+        response = self.client.get(reverse('users:login'))
+        self.assertTemplateUsed(response, 'users/login.html')
+
+    def test_login_reverse_url(self):
+        url = reverse('users:login')
+        self.assertEqual(url, '/login/')
+
+    # TEST REGISTER PAGE
+
+    def test_register_view_status_code(self):
+        response = self.client.get(reverse('users:register'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_register_view_template_used(self):
+        response = self.client.get(reverse('users:register'))
+        self.assertTemplateUsed(response, 'users/signup.html')
+
+    def test_register_reverse_url(self):
+        url = reverse('users:register')
+        self.assertEqual(url, '/register/')
+
     
