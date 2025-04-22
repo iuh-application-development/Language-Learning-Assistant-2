@@ -74,7 +74,6 @@ def voice_api(request):
 
         filename = get_audio_filename(text, lang)
 
-        # 🟢 Log gọn gàng hơn
         logger.info(f"🔹 Yêu cầu tạo giọng nói ({lang}): {text[:50]}...")
 
         if not os.path.exists(filename):
@@ -94,6 +93,8 @@ def voice_api(request):
             response["Content-Disposition"] = f"attachment; filename={os.path.basename(filename)}"
             return response
 
+    except json.JSONDecodeError:
+        return JsonResponse({"error": "Invalid JSON"}, status=400)
     except Exception as e:
         logger.error(f"❌ Lỗi xử lý request: {e}")
         return JsonResponse({"error": str(e)}, status=500)
