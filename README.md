@@ -171,6 +171,11 @@ python manage.py shell
 python -m django --version
 ```
 
+#### Link dự án đã hoàn thành:
+
+#### Link dự án đã deploy: 
+ [Github](https://github.com/PlusNguyn/Language-2.git)
+
 ## 🔍 Cấu trúc dự án
 
 Tham khảo structure.txt
