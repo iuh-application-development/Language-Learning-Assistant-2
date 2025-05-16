@@ -31,6 +31,8 @@ Xuất phát từ triết lý: "Mỗi người đều xứng đáng có một tr
 - **Free Dictionary API**: Hỗ trợ tra cứu từ điển
 - **Opentdb API**: Kho lưu trữ câu hỏi miễn phí
 
+### Ứng dụng được DEPLOY tại RENDER : https://language-assistant-2.onrender.com/
+
 ### Lý do lựa chọn
 Các công nghệ và ứng dụng trên được lựa chọn để đảm bảo hiệu suất, tính linh hoạt và khả năng mở rộng của dự án, đồng thời hỗ trợ nhóm phát triển làm việc hiệu quả và nhanh chóng.
 
