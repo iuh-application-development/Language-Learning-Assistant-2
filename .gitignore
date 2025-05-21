@@ -1,15 +1,33 @@
-# Python
+# Python bytecode
 __pycache__/
 *.py[cod]
-/language_assistant/db.sqlite3
+*.pyo
+*.pyd
 
-# Virtual environments
+# Virtual environment
+venv
 venv/
-env/
+.venv/
+*.venv
 
-# Editors
-.vscode/
-.idea/
+# Django
+*.sqlite3
+*.db
+*.log
+
+# Environment files
+.env
+*.env
 
 # macOS
 .DS_Store
+
+# Git
+*.gitignore
+
+**/migrations/*.py
+!**/migrations/__init__.py
+
+.python-version
+*.rdb
+*.pem
