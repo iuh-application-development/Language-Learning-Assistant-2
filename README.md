@@ -294,6 +294,4 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 * **Giao tiếp liền mạch**: Trợ lý có khả năng ghi nhớ và duy trì mạch hội thoại dựa trên lịch sử tương tác.
 
 ---
-
----
 © 2025 Language Assistant Team. All rights reserved
