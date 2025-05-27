@@ -172,7 +172,8 @@ python manage.py shell
 # Kiểm tra phiên bản Django đang sử dụng
 python -m django --version
 ```
-
+#### Link video demo:
+[Demo](https://youtu.be/LYhBATFP03o?si=1MvrjpNkfAxfsfpg)
 #### Link dự án đã hoàn thành:
 [Language-Learning-Assistant-2](https://language-assistant.onrender.com/login/)
 
