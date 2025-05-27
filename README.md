@@ -216,10 +216,10 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 
 | Họ và tên            | Công việc phụ trách                                                                                                                                                                                                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Trần Thái Nguyên** | - Cấu hình cơ sở dữ liệu Aiven (PostgreSQL) <br> - Từ điển (tra cứu, lưu trữ từ vựng) <br> - Viết unit test <br> - Viết giao diện (Frontend) - Viết Dockerfile cho ứng dụng <br>  - Triển khai ứng dụng trên Render <br>                                                                                                         |
+| **Trần Thái Nguyên** | - Cấu hình cơ sở dữ liệu Aiven (PostgreSQL) <br> - Từ điển (tra cứu, lưu trữ từ vựng) <br>  - Viết giao diện (Frontend) - Viết Dockerfile cho ứng dụng <br>  - Triển khai ứng dụng trên Render <br>                                                                                                         |
 | **Phan Công Chiến**  | - Tính năng flashcard (học từ vựng bằng thẻ) <br> - Chức năng đăng nhập/đăng ký <br>  - Tích hợp Firebase (xác thực hoặc lưu trữ nếu có)                                                                             |
 | **Nguyễn Ngọc Minh** | - Chức năng đăng nhập/đăng ký <br> - Tính năng chatbot (trò chuyện học tập) <br> - Giao diện người dùng (Frontend) <br> - Tích hợp Cripschat (live chat hỗ trợ) <br>  - Viết blog (giới thiệu, hướng dẫn sử dụng) |
-| **Trần Khắc Liêm**   | - Tính năng làm quiz (trắc nghiệm từ vựng) <br> - Giao diện người dùng (Frontend) <br> - Triển khai ứng dụng trên Render <br> - Viết blog (giới thiệu, hướng dẫn sử dụng)                                                                               |
+| **Trần Khắc Liêm**   | - Tính năng làm quiz (trắc nghiệm từ vựng) <br> - Giao diện người dùng (Frontend) <br> - Viết unit test <br> - Viết blog (giới thiệu, hướng dẫn sử dụng)                                                                               |
 
 ---
 ## Kết quả đạt được 
