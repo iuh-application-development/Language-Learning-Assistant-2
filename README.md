@@ -174,6 +174,7 @@ python -m django --version
 ```
 
 #### Link dự án đã hoàn thành:
+[Language-Learning-Assistant-2](https://language-assistant.onrender.com/login/)
 
 #### Link dự án đã deploy: 
  [Github](https://github.com/PlusNguyn/Language-2.git)
@@ -291,16 +292,6 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 
 * **Kết hợp đa hình thức giao tiếp**: Văn bản, giọng nói, hình ảnh, cử chỉ.
 * **Giao tiếp liền mạch**: Trợ lý có khả năng ghi nhớ và duy trì mạch hội thoại dựa trên lịch sử tương tác.
-
----
-
-### 🚀 Gợi ý thêm:
-
-Nếu bạn đang phát triển một **Web Trợ Lý Ngôn Ngữ**, mình có thể hỗ trợ:
-
-* Lập **roadmap phát triển sản phẩm**
-* Tư vấn **tech stack phù hợp**
-* Thiết kế kiến trúc hệ thống hoặc trải nghiệm người dùng (UX)
 
 ---
 
