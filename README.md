@@ -209,5 +209,23 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 | Phan Công Chiến | 22685651 | Backend Developer | phancongchien8278@gmail.com |  [Link](https://github.com/chien24)|
 | Trần Khắc Liêm | 22685251 | UI/UX Designer | liemem147852@gmail.com | [Link](https://github.com/T-K-Liem275) |
 
+Dưới đây là phần phân công công việc viết lại theo định dạng `README.md` chuẩn, tương tự như phần giới thiệu đội ngũ bạn đưa:
+
+---
+
+## 🔧 Phân công công việc
+
+| Họ và tên            | Công việc phụ trách                                                                                                                                                                                                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Trần Thái Nguyên** | - Cấu hình cơ sở dữ liệu Aiven (PostgreSQL) <br> - Từ điển (tra cứu, lưu trữ từ vựng) <br> - Viết unit test <br> - Viết giao diện (Frontend)                                                                                                            |
+| **Phan Công Chiến**  | - Tính năng flashcard (học từ vựng bằng thẻ) <br> - Chức năng đăng nhập/đăng ký <br> - Viết Dockerfile cho ứng dụng <br> - Tích hợp Firebase (xác thực hoặc lưu trữ nếu có)                                                                             |
+| **Nguyễn Ngọc Minh** | - Chức năng đăng nhập/đăng ký <br> - Tính năng chatbot (trò chuyện học tập) <br> - Giao diện người dùng (Frontend) <br> - Tích hợp Cripschat (live chat hỗ trợ) <br> - Triển khai ứng dụng trên Render <br> - Viết blog (giới thiệu, hướng dẫn sử dụng) |
+| **Trần Khắc Liêm**   | - Tính năng làm quiz (trắc nghiệm từ vựng) <br> - Giao diện người dùng (Frontend) <br> - Triển khai ứng dụng trên Render <br> - Viết blog (giới thiệu, hướng dẫn sử dụng)                                                                               |
+
+---
+## Kết quả đạt được 
+---
+## Kết quả chưa đạt được
+
 ---
 © 2025 Language Assistant Team. All rights reserved
