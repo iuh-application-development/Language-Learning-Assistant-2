@@ -1,112 +1,200 @@
+{% extends 'dashboard/base.html' %}
 {% load static %}
 
-{% block title %}
-    <title>GameArt Blog - Community Posts</title>
-{% endblock %}
+{% block title %}<title>LA - Community Blog</title>{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'blog/css/blog-styles.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}"> -->
 {% endblock %}
 
 {% block content %}
-    <div class="nav-bar">
-        <a href="{% url 'dashboard:home' %}">Home</a>
-    </div>
-    <div class="cursor-glow"></div>
-
-    <div class="blog-hero">
-        <div class="blog-hero-content">
-            <h1>Community <span class="highlight">Blog</span></h1>
-            <p>Gaming thoughts, opinions, and experiences from our community</p>
+<!-- Blog Hero Section -->
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-3 text-white animated slideInDown">Community <span class="text-warning">Blog</span></h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a class="text-white" href="{% url 'dashboard:home' %}">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Blog</li>
+                    </ol>
+                </nav>
+                <p class="fs-5 text-white mb-4">Thoughts, opinions, and experiences from our community</p>
+            </div>
         </div>
     </div>
+</div>
 
-    <div class="blog-container">
-        <main class="blog-main">
-
-            <div class="blog-posts">
-                <!-- Post 1 -->
-                {% for post in posts %}
-                    <article class="blog-post">
-                        <div class="post-author">
-                            <img src="{{ post.user.image.url }}" alt="User Avatar" class="author-avatar">
-                            <div class="author-info">
-                                <h4>{{ post.user }}</h4>
-                                <span class="post-date">{{ post.created_at|date:"F j, Y"  }}</span>
-                            </div>
-                        </div>
-                        <div class="post-content">
-                            <h2 class="post-title">{{ post.title }}</h2>
-                            <div class="post-excerpt line-clamp">
-                                <p>{{ post.content }}</p>
-                            </div>
-                            <div class="post-meta">
-                                <div class="post-stats">
-                                    <span><i class="far fa-eye"></i> {{ post.count_view }} views</span>
-                                    <span><i class="far fa-comment"></i> {{ post.count_comment }} comments</span>
-                                    <span><i class="far fa-heart"></i> {{ post.count_like }} likes</span>
+<!-- Blog Content -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <div class="row g-5">
+                    {% for post in posts %}
+                    <div class="col-12">
+                        <div class="blog-item bg-light rounded overflow-hidden shadow-sm">
+                            <div class="blog-content p-4">
+                                <!-- Author Info -->
+                                <div class="d-flex align-items-center mb-3">
+                                    <img class="rounded-circle me-3" src="{{ user.avatar.url }}" alt="User Avatar" style="width: 45px; height: 45px;">
+                                    <div>
+                                        <h6 class="mb-0">{{ post.user.username }}</h6>
+                                        <small class="text-muted">{{ post.created_at|date:"F j, Y" }}</small>
+                                    </div>
                                 </div>
-                                <a href="{% url 'post-detail' post.pk %}" class="read-more">Read Full Post <i class="fas fa-arrow-right"></i></a>
+                                
+                                <!-- Post Content -->
+                                <h4 class="mb-3">{{ post.title }}</h4>
+                                <div class="post-excerpt mb-3">
+                                    <p class="text-muted">{{ post.content|truncatewords:30 }}</p>
+                                </div>
+                                
+                                <!-- Post Stats -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="post-stats">
+                                        <small class="text-muted me-3">
+                                            <i class="far fa-eye me-1"></i> {{ post.count_view }} views
+                                        </small>
+                                        <small class="text-muted me-3">
+                                            <i class="far fa-comment me-1"></i> {{ post.count_comment }} comments
+                                        </small>
+                                        <small class="text-muted">
+                                            <i class="far fa-heart me-1"></i> {{ post.count_like }} likes
+                                        </small>
+                                    </div>
+                                    <a href="{% url 'post-detail' post.pk %}" class="btn btn-primary btn-sm">
+                                        Read More <i class="fas fa-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </article>
-                {% endfor %}
-            </div>
-
-            {% if page_obj.paginator.count > 0 %}
-                <div class="pagination">
-                    {% if page_obj.number > 3 %}
-                        <a class="" href="?page=1">1</a>
-                        <span class="">...</span>
-                    {% endif %}
-        
-                    {% for num in page_obj.paginator.page_range %}
-                        {% if num > page_obj.number|add:"-3" and num < page_obj.number|add:'3' %}
-                            {% if page_obj.number == num %}
-                                <a href="" class="active">{{ num }}</a>
-                            {% else %}
-                                <a class="" href="?page={{ num }}">{{ num }}</a>
-                            {% endif %}
-                        {% endif %}
+                    </div>
                     {% endfor %}
-        
-                    {% if page_obj.number < page_obj.paginator.num_pages|add:'-2' %}
-                        <span class="">...</span>
-                        <a class="nav-btn" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
-                    {% endif %}
-
-                    {% if page_obj.number < page_obj.paginator.num_pages %}
-                        <a href="?page={{ page_obj.next_page_number  }}"><i class="fas fa-chevron-right"></i></a>
-                    {% endif %}
                 </div>
-            {% endif %}
-        </main>
 
-        <aside class="blog-sidebar">
-            <div class="sidebar-section">
-                <h3>Create Post</h3>
-                <a href="{% url 'create-post' %}" class="btn-create-post">
-                    <i class="fas fa-pen"></i> Write a Post
-                </a>
+                <!-- Pagination -->
+                {% if page_obj.paginator.count > 0 %}
+                <div class="d-flex justify-content-center mt-5">
+                    <nav aria-label="Blog pagination">
+                        <ul class="pagination">
+                            {% if page_obj.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            {% endif %}
+
+                            {% if page_obj.number > 3 %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page=1">1</a>
+                            </li>
+                            <li class="page-item disabled">
+                                <span class="page-link">...</span>
+                            </li>
+                            {% endif %}
+
+                            {% for num in page_obj.paginator.page_range %}
+                                {% if num > page_obj.number|add:"-3" and num < page_obj.number|add:'3' %}
+                                    {% if page_obj.number == num %}
+                                    <li class="page-item active">
+                                        <span class="page-link">{{ num }}</span>
+                                    </li>
+                                    {% else %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                                    </li>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if page_obj.number < page_obj.paginator.num_pages|add:'-2' %}
+                            <li class="page-item disabled">
+                                <span class="page-link">...</span>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                            </li>
+                            {% endif %}
+
+                            {% if page_obj.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+                {% endif %}
             </div>
 
-            <div class="sidebar-section">
-                <h3>Popular Authors</h3>
-                <div class="popular-authors">
-                    <div class="author-card">
-                        <img src="{{ user.image.url }}" alt="Popular Author">
-                        <div class="author-card-info">
-                            <h4>{{ user.username }}</h4>
-                            <p>{{ user.posts.count }} posts</p>
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <!-- Create Post Section -->
+                    <div class="col-12">
+                        <div class="bg-light rounded p-4">
+                            <h4 class="mb-4">Create Post</h4>
+                            <a href="{% url 'create-post' %}" class="btn btn-primary w-100">
+                                <i class="fas fa-pen me-2"></i> Write a Post
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Popular Authors Section -->
+                    <div class="col-12">
+                        <div class="bg-light rounded p-4">
+                            <h4 class="mb-4">Popular Authors</h4>
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-3" src="{{ user.avatar.url }}" alt="Popular Author" style="width: 50px; height: 50px;">
+                                <div>
+                                    <h6 class="mb-1">{{ user.username }}</h6>
+                                    <small class="text-muted">{{ user.posts.count }} posts</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories Section (Optional) -->
+                    <div class="col-12">
+                        <div class="bg-light rounded p-4">
+                            <h4 class="mb-4">Categories</h4>
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2 text-white">Gaming</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2 text-white">Reviews</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2 text-white">News</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2 text-white">Tips</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Posts Section (Optional) -->
+                    <div class="col-12">
+                        <div class="bg-light rounded p-4">
+                            <h4 class="mb-4">Recent Posts</h4>
+                            {% for post in posts|slice:":3" %}
+                            <div class="d-flex align-items-center border-bottom py-2">
+                                <img class="rounded me-3" src="{{ user.avatar.url }}" alt="" style="width: 40px; height: 40px;">
+                                <div>
+                                    <h6 class="mb-1"><a href="{% url 'post-detail' post.pk %}" class="text-decoration-none">{{ post.title|truncatewords:5 }}</a></h6>
+                                    <small class="text-muted">{{ post.created_at|date:"M j" }}</small>
+                                </div>
+                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
-        </aside>
+        </div>
     </div>
-{% endblock %}
+</div>
 
-{% block extra_js %}
-    <script src="{% static 'blog/js/script.js' %}"></script>
+<!-- Custom Styles for Blog -->
+
 {% endblock %}
