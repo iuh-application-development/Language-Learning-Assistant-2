@@ -1,6 +1,6 @@
 # 🌏 LANGUAGE ASSISTANT - TRỢ LÝ NGÔN NGỮ
 
-![alt text](image.png)
+- Trang chủ ![alt text](screenshots/trangchu.jpg)
 
 ## 📝 Giới thiệu
 
@@ -209,7 +209,6 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 | Phan Công Chiến | 22685651 | Backend Developer | phancongchien8278@gmail.com |  [Link](https://github.com/chien24)|
 | Trần Khắc Liêm | 22685251 | UI/UX Designer | liemem147852@gmail.com | [Link](https://github.com/T-K-Liem275) |
 
-Dưới đây là phần phân công công việc viết lại theo định dạng `README.md` chuẩn, tương tự như phần giới thiệu đội ngũ bạn đưa:
 
 ---
 
@@ -217,15 +216,93 @@ Dưới đây là phần phân công công việc viết lại theo định dạ
 
 | Họ và tên            | Công việc phụ trách                                                                                                                                                                                                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Trần Thái Nguyên** | - Cấu hình cơ sở dữ liệu Aiven (PostgreSQL) <br> - Từ điển (tra cứu, lưu trữ từ vựng) <br> - Viết unit test <br> - Viết giao diện (Frontend)                                                                                                            |
-| **Phan Công Chiến**  | - Tính năng flashcard (học từ vựng bằng thẻ) <br> - Chức năng đăng nhập/đăng ký <br> - Viết Dockerfile cho ứng dụng <br> - Tích hợp Firebase (xác thực hoặc lưu trữ nếu có)                                                                             |
-| **Nguyễn Ngọc Minh** | - Chức năng đăng nhập/đăng ký <br> - Tính năng chatbot (trò chuyện học tập) <br> - Giao diện người dùng (Frontend) <br> - Tích hợp Cripschat (live chat hỗ trợ) <br> - Triển khai ứng dụng trên Render <br> - Viết blog (giới thiệu, hướng dẫn sử dụng) |
-| **Trần Khắc Liêm**   | - Tính năng làm quiz (trắc nghiệm từ vựng) <br> - Giao diện người dùng (Frontend) <br> - Triển khai ứng dụng trên Render <br> - Viết blog (giới thiệu, hướng dẫn sử dụng)                                                                               |
+| **Trần Thái Nguyên** | - Cấu hình cơ sở dữ liệu Aiven (PostgreSQL) <br> - Từ điển (tra cứu, lưu trữ từ vựng) <br>  - Viết giao diện (Frontend) - Viết Dockerfile cho ứng dụng <br>  - Triển khai ứng dụng trên Render <br>                                                                                                         |
+| **Phan Công Chiến**  | - Tính năng flashcard (học từ vựng bằng thẻ) <br> - Chức năng đăng nhập/đăng ký <br>  - Tích hợp Firebase (xác thực hoặc lưu trữ nếu có)                                                                             |
+| **Nguyễn Ngọc Minh** | - Chức năng đăng nhập/đăng ký <br> - Tính năng chatbot (trò chuyện học tập) <br> - Giao diện người dùng (Frontend) <br> - Tích hợp Cripschat (live chat hỗ trợ) <br>  - Viết blog (giới thiệu, hướng dẫn sử dụng) |
+| **Trần Khắc Liêm**   | - Tính năng làm quiz (trắc nghiệm từ vựng) <br> - Giao diện người dùng (Frontend) <br> - Viết unit test <br> - Viết blog (giới thiệu, hướng dẫn sử dụng)                                                                               |
 
 ---
 ## Kết quả đạt được 
+- Profile ![alt text](screenshots/profile.jpg)
+- Từ điển ![alt text](screenshots/tudien.jpg)
+- Flashcard ![alt text](screenshots/flashcard.jpg)
+- Quizgame ![alt text](screenshots/quizgame.jpg)
+- Livestream ![alt text](screenshots/livestream.jpg)
+- Blog ![alt text](screenshots/blog.jpg)
+- Tạo blog ![alt text](screenshots/taoblog.jpg)
+- Viết blog ![alt text](screenshots/vietblog.jpg)
+- Khóa học ![alt text](screenshots/khoahoc.jpg)
 ---
 ## Kết quả chưa đạt được
+
+---
+
+## 🌐 Xu hướng phát triển Web Trợ Lý Ngôn Ngữ (Language Assistant Web App)
+
+**Web trợ lý ngôn ngữ** đang và sẽ tiếp tục phát triển mạnh mẽ nhờ sự kết hợp giữa **trí tuệ nhân tạo (AI)**, **xử lý ngôn ngữ tự nhiên (NLP)** và các **công nghệ web hiện đại**. 
+- Dưới đây là những hướng đi tiêu biểu và tiềm năng trong tương lai:
+
+---
+
+### 1. 🎯 Tùy biến theo ngữ cảnh và cá nhân hóa
+
+* **Tự học hành vi người dùng**: Ghi nhớ thói quen, sở thích và phong cách viết riêng của từng cá nhân.
+* **Tùy chỉnh đầu ra theo mục đích**: Gợi ý giọng văn phù hợp cho các tình huống như viết email chuyên nghiệp, mô tả sản phẩm thu hút, dịch thuật mang tính bản địa hóa cao.
+
+---
+
+### 2. 🌍 Hỗ trợ đa ngôn ngữ và dịch thuật thông minh
+
+* **Dịch ngữ cảnh nâng cao** (context-aware): Hiểu được ý nghĩa sâu và sắc thái của ngôn ngữ.
+* **Chuyển ngữ đồng thời** (real-time translation): Hữu ích trong học tập, hội họp, và giao tiếp xuyên biên giới.
+
+---
+
+### 3. 🖼️ Tích hợp đa phương tiện
+
+* **Speech-to-Text & Text-to-Speech**: Nhận diện và phản hồi bằng giọng nói tự nhiên.
+* **Hỗ trợ hình ảnh, biểu đồ, video**: Trình bày nội dung sinh động và dễ hiểu hơn – ví dụ như minh họa bằng sơ đồ tư duy hoặc video hướng dẫn.
+
+---
+
+### 4. 🔗 Kết nối với hệ thống và nền tảng khác
+
+* **Tích hợp hệ thống doanh nghiệp**: CRM, hệ thống hỗ trợ khách hàng, quản lý tài liệu nội bộ.
+* **Plugin và tiện ích mở rộng**: Dành cho Google Docs, Notion, WordPress, Figma, v.v.
+
+---
+
+### 5. 🤖 AI nâng cao và tư duy nhiều bước
+
+* **Tác vụ phức tạp hơn**: Như lập kế hoạch, viết báo cáo, phân tích thị trường, hoặc hỗ trợ nghiên cứu học thuật/pháp lý.
+* **Reasoning nhiều bước**: Có khả năng thực hiện chuỗi nhiệm vụ thay vì phản hồi đơn lẻ.
+
+---
+
+### 6. 🔐 Bảo mật và đạo đức AI
+
+* **Tăng cường bảo vệ dữ liệu cá nhân**.
+* **Minh bạch về quy trình xử lý thông tin**.
+* **AI đạo đức**: Kiểm soát định kiến, lọc nội dung nhạy cảm, đảm bảo sử dụng đúng mục đích.
+
+---
+
+### 7. 🧠 Tương tác tự nhiên và liên tục
+
+* **Kết hợp đa hình thức giao tiếp**: Văn bản, giọng nói, hình ảnh, cử chỉ.
+* **Giao tiếp liền mạch**: Trợ lý có khả năng ghi nhớ và duy trì mạch hội thoại dựa trên lịch sử tương tác.
+
+---
+
+### 🚀 Gợi ý thêm:
+
+Nếu bạn đang phát triển một **Web Trợ Lý Ngôn Ngữ**, mình có thể hỗ trợ:
+
+* Lập **roadmap phát triển sản phẩm**
+* Tư vấn **tech stack phù hợp**
+* Thiết kế kiến trúc hệ thống hoặc trải nghiệm người dùng (UX)
+
+---
 
 ---
 © 2025 Language Assistant Team. All rights reserved
