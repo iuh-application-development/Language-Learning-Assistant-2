@@ -27,4 +27,5 @@ urlpatterns = [
     path('', include('dictionary.urls')),
     path('', include('podcast.urls')),
     path('', include('quiz.urls')),
+    path('', include('blog.urls'))
 ]

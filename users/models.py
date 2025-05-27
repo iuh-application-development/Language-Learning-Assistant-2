@@ -32,5 +32,11 @@ class MyUser(AbstractUser):
     objects = MyUserManager()
     avatar = models.ImageField(upload_to='avatars/', default='avatars/default.png', blank=True)
     bio = models.TextField(max_length=500, blank=True, default=None, null=True)
+    
+    
+    def save(self, *args, **kwargs):
+        if not self.username and self.email:
+            self.username = self.email.split('@')[0]
+        return super().save(*args, **kwargs)
 
     

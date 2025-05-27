@@ -1,0 +1,242 @@
+{% load static %}
+
+{% block title %}
+<title>The Future of Open World Gaming</title>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/blog-detail-styles.css' %}">
+{% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+{% block content %}
+    <div class="nav-bar">
+        <a href="{% url 'dashboard:home' %}">Home</a>
+        <a href="{% url 'posts' %}">Blog</a>
+    </div>
+
+    <div class="cursor-glow"></div>
+
+    <div class="blog-detail-container">
+        <div class="blog-detail-header">
+            <h1 class="blog-detail-title">{{ object.title }}</h1>
+            
+            <div class="blog-detail-meta">
+                <div class="blog-detail-author">
+                    <img src="{{ object.user.image.url }}" alt="Author Avatar" class="author-avatar">
+                    <div class="author-info">
+                        <span class="author-name">{{ object.user.username|title }}</span>
+                    </div>
+                </div>
+                <div class="blog-detail-date">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>{{ object.created_at|date:"F j, Y" }}</span>
+                </div>
+                <div class="blog-detail-views">
+                    <i class="far fa-eye"></i>
+                    <span>{{ object.count_view }} views</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-detail-content-wrapper">
+            <div class="blog-detail-main">
+                <div class="blog-detail-content">
+                    <div class="blog-detail-text">
+                        <h2>{{ object.title }}</h2>
+                        <p>
+                            {{ object.content }}
+                        </p>
+                    </div>
+
+                    <div class="blog-detail-share-bottom">
+                        <span>Share this article:</span>
+                        <div class="share-buttons">
+                            <a href="#" class="share-button twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="share-button facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="share-button reddit"><i class="fab fa-reddit-alien"></i></a>
+                            <a href="#" class="share-button linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="share-button copy" id="copy-link-bottom"><i class="far fa-copy"></i></a>
+                            {% if user.is_authenticated %}
+                                <a href="#" class="share-button copy {{ post_liked }}" id="like-post-bottom"><i class="fa-solid fa-heart"></i></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-detail-comments">
+                    <h3 class="comments-title">Comments <span class="comments-count">({{ object.count_comment }})</span></h3>
+                    
+                    {% if user.is_authenticated %}
+                        <div class="comment-form-container">
+                            <h4>Leave a Comment</h4>
+                            <form method="POST" class="comment-form">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="comment-name">Name <span class="required">*</span></label>
+                                        {{ comment_form.name }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="comment-email">Email <span class="required">*</span></label>
+                                        {{ comment_form.email }}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment-content">Comment <span class="required">*</span></label>
+                                    {{ comment_form.content }}
+                                </div>
+                                <button type="submit" class="btn-primary">Post Comment</button>
+                            </form>
+                        </div>
+                    {% endif %}
+
+                    <div class="comments-list">
+                        {% for comment in page_obj %}
+                            <div id="comment-{{ comment.pk }}" class="comment" style="scroll-margin-top: 80px;">
+                                <div class="comment-avatar">
+                                    <img src="{{ comment.user.image.url }}" alt="User Avatar">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-meta">
+                                        {% if comment.parent %}
+                                            <div class="comment-quote">
+                                                <p>Reply <a href="#comment-{{ comment.parent.pk }}">@{{ comment.parent.user.username }}</a>:</p>
+                                                <p class="line-clamp">{{ comment.parent.content|truncatechars:100 }}</p>
+                                            </div>
+                                        {% endif %}
+                                        <div class="comment-info">
+                                            <span class="comment-author">{{ comment.user.username }}</span>
+                                            <span class="comment-date">{{ comment.created_at|date:"F d, Y H:i"|title }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="comment-text">
+                                        <p>{{ comment.content }}</p>
+                                    </div>
+                                    {% if user.us_authenticated %}
+                                        <div class="comment-actions">
+                                            <a comment-pk={{ comment.pk }} href="#" class="comment-like {% if comment.id in liked_comment_ids %}liked{% endif %}"><i class="fas fa-heart"></i> <span>{{ comment.count_like }}</span></a>
+                                            <a href="#" class="comment-reply-toggle">Reply</a>
+                                        </div>
+                                    {% endif %}
+                                    <div class="comment-reply-form" style="display: none; margin-top: 10px;">
+                                        <form style="display: flex; align-items: flex-end; gap: 20px;" action="" method="POST">
+                                            {% csrf_token %}
+                                            <label for="comment-content"></label>
+                                            {{ reply_form.content }}
+                                            <input type="hidden" name="parent_id" value="{{ comment.pk }}">
+                                            <button type="submit" class="btn-reply-submit">Reply</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-detail-sidebar">
+                <div class="sidebar-section author-section">
+                    <div class="author-card">
+                        <img src="{{ object.user.image.url }}" alt="Author Avatar" class="author-card-avatar">
+                        <h3 class="author-card-name">{{ object.user.username|title }}</h3>
+                        <p class="author-card-posts">{{ object.user.posts.count }} Articles</p>
+                        <a href="{% url 'user-post-list' object.user.pk %}" class="author-card-link">View All Posts</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Related Articles</h3>
+                    <div class="related-posts">
+                        {% for related_post in related_posts %}
+                            <div class="related-post">
+                                    <div class="related-post-image">
+                                        <img src="{{ related_post.user.image.url }}" alt="Related Post">
+                                    </div>
+                                    <div class="related-post-info">
+                                        <h4><a href="{% url 'post-detail' related_post.pk %}">{{ related_post.title }}</a></h4>
+                                        <span class="related-post-date">{{ related_post.created_at|date:"F j, Y" }}</span>
+                                    </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Newsletter</h3>
+                    <div class="sidebar-newsletter">
+                        <p>Subscribe to our newsletter to get the latest gaming news and articles delivered to your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Follow Us</h3>
+                    <div class="sidebar-social">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            {% if page_obj.paginator.count > 0 %}
+                <div class="comments-pagination">
+                    {% if page_obj.number > 3 %}
+                        <a class="" href="?page=1">1</a>
+                        <span class="">...</span>
+                    {% endif %}
+        
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if num > page_obj.number|add:"-3" and num < page_obj.number|add:'3' %}
+                            {% if page_obj.number == num %}
+                                <span class="current">{{ num }}</span>
+                            {% else %}
+                                <a class="" href="?page={{ num }}">{{ num }}</a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+        
+                    {% if page_obj.number < page_obj.paginator.num_pages|add:'-2' %}
+                        <span class="">...</span>
+                        <a class="nav-btn" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                    {% endif %}
+
+                    {% if page_obj.number < page_obj.paginator.num_pages %}
+                        <a href="?page={{ page_obj.next_page_number  }}">→</a>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        const post_pk = "{{ object.pk }}";
+    </script>
+    <script src="{% static 'blog/js/script.js' %}"></script>
+    <script src="{% static 'blog/js/blog-detail-script.js' %}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const replyToggles = document.querySelectorAll('.comment-reply-toggle');
+            replyToggles.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const commentContent = btn.closest('.comment-content');
+                    const replyForm = commentContent.querySelector('.comment-reply-form');
+                    replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+{%  endblock %}

@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'dictionary.apps.DictionaryConfig',
     'podcast.apps.PodcastConfig',
     'quiz.apps.QuizConfig',
+    # blog
+    'blog.apps.BlogConfig'
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -138,7 +140,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 AUTH_USER_MODEL = 'users.MyUser'
-LOGIN_URL = 'home'
+LOGIN_URL = 'dashboard:home'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

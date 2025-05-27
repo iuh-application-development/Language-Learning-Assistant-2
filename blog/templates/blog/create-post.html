@@ -1,0 +1,45 @@
+{% load static %}
+
+{% block title %}
+    <title>Create New Post</title>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/create-post-styles.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="nav-bar">
+        <a href="{% url 'dashboard:home' %}">Home</a>
+        <a href="{% url 'posts' %}">Blog</a>
+    </div>
+
+
+    <div class="cursor-glow"></div>
+
+    <div class="create-post-container">
+        <div class="create-post-header">
+            <h1>Create New <span class="highlight">Post</span></h1>
+            <p>Share your gaming thoughts, experiences, and opinions with the community</p>
+        </div>
+
+        <div class="create-post-content">
+            <form method="POST" id="post-form" class="post-form">
+                {% csrf_token %}
+                <div class="form-group">{{ form.title.label_tag }} {{ form.title }}</div>
+                <div class="form-group">{{ form.content.label_tag }} {{ form.content }}</div>
+
+                <div style="display: flex;" class="form-row checkbox-row">
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary" id="publish-post">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'blog/js/script.js' %}"></script>
+{% endblock %}
