@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'podcast.apps.PodcastConfig',
     'quiz.apps.QuizConfig',
     # blog
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
+    'django_extensions'
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
