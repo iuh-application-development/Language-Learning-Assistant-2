@@ -164,10 +164,10 @@ class ForgotPasswordForm(forms.Form):
 
 
 class UserUpdateForm(forms.ModelForm):
-    email = forms.EmailField(widget=forms.EmailInput(attrs={
-        'readonly': 'readonly'
-    }))
     class Meta:
         model = MyUser
-        fields = ['username', 'email']
-        
+        fields = ['username', 'email', 'bio', 'avatar']
+        widgets = {
+            'bio': forms.Textarea(attrs={'rows': 3}),
+            'avatar': ClearableFileInput(attrs={'class': 'form-control'}),
+        }
