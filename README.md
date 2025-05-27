@@ -174,6 +174,10 @@ python -m django --version
 ```
 #### Link video demo:
 [Demo](https://youtu.be/LYhBATFP03o?si=1MvrjpNkfAxfsfpg)
+
+#### Link video thuyết trình
+[Video](https://youtu.be/5Tour9DtPHg)
+
 #### Link dự án đã hoàn thành:
 [Language-Learning-Assistant-2](https://language-assistant.onrender.com/login/)
 
