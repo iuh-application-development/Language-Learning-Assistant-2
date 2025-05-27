@@ -175,8 +175,8 @@ python -m django --version
 
 #### Link dự án đã hoàn thành:
 
-#### Link dự án đã deploy: 
- [Github](https://github.com/PlusNguyn/Language-2.git)
+#### Link github dự án đã deploy: 
+ [Github](https://github.com/PlusNguyn/Language-2.git)](https://github.com/PlusNguyn/Language-Assistant.git)
 
 ## 🔍 Cấu trúc dự án
 
