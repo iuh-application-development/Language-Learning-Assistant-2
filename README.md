@@ -230,6 +230,7 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 - Quizgame ![alt text](screenshots/quizgame.jpg)
 - Livestream ![alt text](screenshots/livestream.jpg)
 - Blog ![alt text](screenshots/blog.jpg)
+- Tạo blog ![alt text](screenshots/taoblog.jpg)
 - Viết blog ![alt text](screenshots/vietblog.jpg)
 - Khóa học ![alt text](screenshots/khoahoc.jpg)
 ---
