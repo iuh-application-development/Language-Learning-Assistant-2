@@ -1,6 +1,6 @@
 # 🌏 LANGUAGE ASSISTANT - TRỢ LÝ NGÔN NGỮ
 
-![alt text](image.png)
+- Trang chủ ![alt text](screenshots/trangchu.jpg)
 
 ## 📝 Giới thiệu
 
@@ -223,7 +223,6 @@ Chúng tôi luôn chào đón mọi đóng góp từ cộng đồng! Nếu bạn
 
 ---
 ## Kết quả đạt được 
-- Trang chủ ![alt text](screenshots/trangchu.jpg)
 - Profile ![alt text](screenshots/profile.jpg)
 - Từ điển ![alt text](screenshots/tudien.jpg)
 - Flashcard ![alt text](screenshots/flashcard.jpg)
