@@ -1,21 +1,20 @@
+{% extends 'dashboard/base.html' %}
 {% load static %}
 
 {% block title %}
-    <title>Create New Post</title>
-{% endblock %}
-
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog/css/blog-styles.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/css/create-post-styles.css' %}">
+    <title>Create New Post - Language Assistant Blog</title>
 {% endblock %}
 
 {% block content %}
+    <!-- Additional CSS for create post -->
+    <link rel="stylesheet" href="{% static 'blog/css/blog-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/create-post-styles.css' %}">
+
     <div class="nav-bar">
         <a href="{% url 'dashboard:home' %}">Home</a>
         <a href="{% url 'posts' %}">Blog</a>
     </div>
-
 
     <div class="cursor-glow"></div>
 
@@ -38,8 +37,7 @@
             </form>
         </div>
     </div>
-{% endblock %}
 
-{% block extra_js %}
+    <!-- Create Post JavaScript -->
     <script src="{% static 'blog/js/script.js' %}"></script>
 {% endblock %}
