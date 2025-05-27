@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'quiz.apps.QuizConfig',
     # blog
     'blog.apps.BlogConfig',
-    'django_extensions'
+    'django_extensions',
+    'livestream.apps.LivestreamConfig'
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
